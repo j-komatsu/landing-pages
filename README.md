@@ -5,6 +5,14 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
+## 🌟 デモサイト公開中！
+
+> **[📺 すべてのテンプレートをライブデモで確認](https://j-komatsu.github.io/landing-pages/)**
+> 
+> 31種類のランディングページテンプレートを実際に体験できます
+
+---
+
 様々な業界に対応したプロフェッショナルなランディングページ（LP）テンプレート集です。GitHub Pagesで公開可能で、ポートフォリオや実際のプロジェクトで使用できる高品質なデザインを提供しています。
 
 ## 📖 概要
@@ -148,6 +156,9 @@ landing-pages/
 
 このリポジトリはGitHub Pagesで公開されており、以下のURLからアクセスできます：
 
+**🔗 [https://j-komatsu.github.io/landing-pages/](https://j-komatsu.github.io/landing-pages/)**
+
+フォークして自分のリポジトリで公開する場合：
 ```
 https://[あなたのユーザー名].github.io/landing-pages/
 ```
