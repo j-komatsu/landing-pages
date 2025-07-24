@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCity 2049 | 未来への仮想移住体験</title>
+    <meta name="description" content="あなたはもう、現実に縛られる必要はありません。2049年、仮想都市での新しい人生を体験してみませんか？">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="MetaCity 2049 | 未来への仮想移住体験">
+    <meta property="og:description" content="仮想空間上に構築された未来都市への移住体験。現実と空想の境界を超越した新しいライフスタイルを。">
+    <meta property="og:image" content="images/hero-metacity.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MetaCity 2049 | 未来への仮想移住体験">
+    <meta name="twitter:description" content="仮想空間上に構築された未来都市への移住体験。現実と空想の境界を超越した新しいライフスタイルを。">
+    <meta name="twitter:image" content="images/hero-metacity.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- グラスモーフィズムナビゲーション -->
+    <nav class="glass-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text hologram-text">MetaCity</span>
+                <span class="logo-year">2049</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#portal" class="nav-link quantum-link">Portal</a>
+                <a href="#world" class="nav-link quantum-link">World</a>
+                <a href="#experience" class="nav-link quantum-link">Experience</a>
+                <a href="#residents" class="nav-link quantum-link">Residents</a>
+                <a href="#access" class="nav-link quantum-link">Access</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Immersive Portal Hero -->
+    <section class="portal-hero" id="portal">
+        <!-- 3Dパーティクル背景 -->
+        <div class="particle-canvas" id="particleCanvas"></div>
+        
+        <!-- ホログラム風オーバーレイ -->
+        <div class="hologram-overlay">
+            <div class="hologram-grid"></div>
+            <div class="hologram-scanline"></div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="portal-content">
+            <div class="dimension-card main-portal">
+                <div class="portal-badge">
+                    <span class="badge-text">Initiating Connection...</span>
+                    <div class="signal-indicator">
+                        <div class="signal-dot"></div>
+                        <div class="signal-dot"></div>
+                        <div class="signal-dot"></div>
+                    </div>
+                </div>
+                
+                <h1 class="portal-title">
+                    <span class="title-line hologram-text">ようこそ、</span>
+                    <span class="title-line hologram-text highlight">2049年へ</span>
+                </h1>
+                
+                <p class="portal-description quantum-text">
+                    あなたはもう、現実に縛られる必要はありません。<br>
+                    新しい人生を、仮想から。<br>
+                    <span class="accent-text">2049年、出勤は"ログイン"から始まる。</span>
+                </p>
+                
+                <!-- アクセスポータル -->
+                <div class="portal-actions">
+                    <button class="quantum-btn primary" id="enterMetacity">
+                        <span class="btn-text">仮想都市を探索</span>
+                        <div class="btn-energy"></div>
+                        <div class="btn-particles"></div>
+                    </button>
+                    <button class="quantum-btn secondary" id="watchIntro">
+                        <span class="btn-text">体験映像を見る</span>
+                        <div class="btn-hologram"></div>
+                    </button>
+                </div>
+                
+                <!-- 接続統計 -->
+                <div class="connection-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="127">0</span>
+                        <span class="stat-label">Active Residents</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="847">0</span>
+                        <span class="stat-label">Virtual Experiences</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2049">0</span>
+                        <span class="stat-label">Year Connected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 次元スクロール誘導 -->
+        <div class="dimension-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-wave"></div>
+                <span class="scroll-text">Dive Deeper</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reality Bridge Section -->
+    <section class="reality-bridge" id="world">
+        <div class="container">
+            <div class="bridge-header">
+                <h2 class="section-title dimensional-title">
+                    <span class="title-glow">Virtual</span>
+                    <span class="title-normal">LifeStyle</span>
+                </h2>
+                <p class="section-subtitle quantum-text">
+                    現実と仮想の境界が消失する、新しい生活体験
+                </p>
+            </div>
+            
+            <!-- パララックス都市マップ -->
+            <div class="city-map-container">
+                <div class="city-map-background">
+                    <div class="map-layer layer-1"></div>
+                    <div class="map-layer layer-2"></div>
+                    <div class="map-layer layer-3"></div>
+                </div>
+                
+                <div class="city-districts">
+                    <div class="district-node" data-district="residential">
+                        <div class="node-pulse"></div>
+                        <div class="node-label">
+                            <h4>Virtual Residential</h4>
+                            <p>夢の空中庭園で新しい生活を</p>
+                        </div>
+                    </div>
+                    
+                    <div class="district-node" data-district="business">
+                        <div class="node-pulse"></div>
+                        <div class="node-label">
+                            <h4>Business District</h4>
+                            <p>重力に縛られない働き方</p>
+                        </div>
+                    </div>
+                    
+                    <div class="district-node" data-district="entertainment">
+                        <div class="node-pulse"></div>
+                        <div class="node-label">
+                            <h4>Entertainment Zone</h4>
+                            <p>無限のエンターテイメント空間</p>
+                        </div>
+                    </div>
+                    
+                    <div class="district-node" data-district="learning">
+                        <div class="node-pulse"></div>
+                        <div class="node-label">
+                            <h4>Learning Island</h4>
+                            <p>知識の海に浮かぶ学習空間</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Experiences -->
+    <section class="digital-experiences" id="experience">
+        <div class="container">
+            <div class="experiences-header">
+                <h2 class="section-title dimensional-title">
+                    <span class="title-normal">Digital</span>
+                    <span class="title-glow">Experiences</span>
+                </h2>
+                <p class="section-subtitle quantum-text">
+                    五感を超越した体験があなたを待っています
+                </p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card glass-card floating-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🏠</div>
+                    <h3 class="card-title">Virtual Residence</h3>
+                    <p class="card-description">
+                        物理法則に縛られない理想の住空間。雲の上の邸宅から海底の宮殿まで、あらゆる夢の住まいを実現。
+                    </p>
+                    <div class="card-features">
+                        <span class="feature-tag">✨ 無重力インテリア</span>
+                        <span class="feature-tag">🌌 360°パノラマビュー</span>
+                        <span class="feature-tag">🎨 無限カスタマイズ</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card glass-card floating-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Quantum Work</h3>
+                    <p class="card-description">
+                        思考と創造力だけが求められる未来の働き方。アイデアが形になる瞬間を体験してください。
+                    </p>
+                    <div class="card-features">
+                        <span class="feature-tag">🧠 思考インターフェース</span>
+                        <span class="feature-tag">⚡ 瞬間コラボレーション</span>
+                        <span class="feature-tag">🚀 創造力拡張</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card glass-card floating-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">💕</div>
+                    <h3 class="card-title">Digital Romance</h3>
+                    <p class="card-description">
+                        魂の繋がりを重視した新しい恋愛のかたち。距離も時間も超越した深い絆を育みましょう。
+                    </p>
+                    <div class="card-features">
+                        <span class="feature-tag">💫 心の同期</span>
+                        <span class="feature-tag">🌈 感情の可視化</span>
+                        <span class="feature-tag">✨ 永遠の瞬間</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card glass-card floating-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">🍽️</div>
+                    <h3 class="card-title">Sensory Dining</h3>
+                    <p class="card-description">
+                        味覚を超えた食体験。記憶の味、夢の料理、まだ見ぬ惑星の特産品まで。
+                    </p>
+                    <div class="card-features">
+                        <span class="feature-tag">🌟 記憶の味再現</span>
+                        <span class="feature-tag">🚀 宇宙料理体験</span>
+                        <span class="feature-tag">🎭 感情フレーバー</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Testimonials -->
+    <section class="virtual-testimonials" id="residents">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2 class="section-title dimensional-title">
+                    <span class="title-normal">Resident</span>
+                    <span class="title-glow">Voices</span>
+                </h2>
+                <p class="section-subtitle quantum-text">
+                    既に2049年で生活している仮想住民からのメッセージ
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="resident-header">
+                        <div class="resident-avatar">
+                            <img src="images/testimonial-avatar1.jpg" alt="住民#097 アバター" class="avatar-image">
+                            <!-- ここに未来的なアバター画像 -->
+                            <div class="avatar-status online"></div>
+                        </div>
+                        <div class="resident-info">
+                            <h4 class="resident-id">住民#097</h4>
+                            <p class="resident-role">Quantum Architect</p>
+                            <div class="resident-location">
+                                <span class="location-icon">📍</span>
+                                <span>Sky District Level 47</span>
+                            </div>
+                        </div>
+                        <div class="connection-time">
+                            <span class="time-label">接続時間</span>
+                            <span class="time-value">847h</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "現実では不可能だった建築を設計している。重力のない空間で創造する喜びは、言葉では表現できない。ここでは、想像力が唯一の制約だ。"
+                        </p>
+                        <div class="testimonial-tags">
+                            <span class="tag">#創造</span>
+                            <span class="tag">#無限可能性</span>
+                            <span class="tag">#未来建築</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card">
+                    <div class="resident-header">
+                        <div class="resident-avatar">
+                            <img src="images/testimonial-avatar2.jpg" alt="住民#TRI-21 アバター" class="avatar-image">
+                            <!-- ここに未来的なアバター画像 -->
+                            <div class="avatar-status online"></div>
+                        </div>
+                        <div class="resident-info">
+                            <h4 class="resident-id">住民#TRI-21</h4>
+                            <p class="resident-role">Emotion Designer</p>
+                            <div class="resident-location">
+                                <span class="location-icon">📍</span>
+                                <span>Crystal Garden Dome</span>
+                            </div>
+                        </div>
+                        <div class="connection-time">
+                            <span class="time-label">接続時間</span>
+                            <span class="time-value">1.2k h</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "感情をデザインし、記憶を編集する。現実では体験できない深い感動を創り出せる。ここでは、心の奥底にある真の自分と出会えた。"
+                        </p>
+                        <div class="testimonial-tags">
+                            <span class="tag">#感情デザイン</span>
+                            <span class="tag">#真の自分</span>
+                            <span class="tag">#深い感動</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card">
+                    <div class="resident-header">
+                        <div class="resident-avatar">
+                            <img src="images/testimonial-avatar3.jpg" alt="住民#NOVA-88 アバター" class="avatar-image">
+                            <!-- ここに未来的なアバター画像 -->
+                            <div class="avatar-status online"></div>
+                        </div>
+                        <div class="resident-info">
+                            <h4 class="resident-id">住民#NOVA-88</h4>
+                            <p class="resident-role">Time Curator</p>
+                            <div class="resident-location">
+                                <span class="location-icon">📍</span>
+                                <span>Temporal Research Lab</span>
+                            </div>
+                        </div>
+                        <div class="connection-time">
+                            <span class="time-label">接続時間</span>
+                            <span class="time-value">∞</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "時間という概念から解放された。過去と未来を自由に行き来し、最適な瞬間を選んで生きている。人生のクオリティが次元を超えた。"
+                        </p>
+                        <div class="testimonial-tags">
+                            <span class="tag">#時間超越</span>
+                            <span class="tag">#最適化人生</span>
+                            <span class="tag">#次元突破</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Video -->
+    <section class="virtual-tour">
+        <div class="container">
+            <div class="tour-header">
+                <h2 class="section-title dimensional-title">
+                    <span class="title-glow">Virtual</span>
+                    <span class="title-normal">Tour</span>
+                </h2>
+                <p class="section-subtitle quantum-text">
+                    仮想都市での一日を360°体験
+                </p>
+            </div>
+            
+            <div class="video-container glass-card">
+                <div class="video-wrapper">
+                    <!-- YouTube動画埋め込み（レスポンシブ） -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1&controls=1&showinfo=0&rel=0&modestbranding=1" 
+                        title="MetaCity 2049 Virtual Tour"
+                        frameborder="0" 
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="video-overlay">
+                        <div class="play-button quantum-btn">
+                            <span class="play-icon">▶</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">仮想都市の一日</h3>
+                    <p class="video-description">
+                        朝の瞑想から夜の創造活動まで、MetaCityでの24時間をお楽しみください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dimension Access (FAQ + Access) -->
+    <section class="dimension-access" id="access">
+        <div class="container">
+            <div class="access-header">
+                <h2 class="section-title dimensional-title">
+                    <span class="title-normal">Dimension</span>
+                    <span class="title-glow">Access</span>
+                </h2>
+                <p class="section-subtitle quantum-text">
+                    新次元への扉を開く前に
+                </p>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="faq-container">
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="question-text">仮想移住って何ですか？</span>
+                            <div class="question-icon">
+                                <div class="icon-line"></div>
+                                <div class="icon-line"></div>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="answer-text">
+                                仮想移住とは、物理的な制約から解放された新しい生活スタイルです。MetaCity 2049では、現実の身体は安全な場所にいながら、意識を仮想空間に投影し、そこで豊かな人生を送ることができます。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="question-text">料金体系を教えてください</span>
+                            <div class="question-icon">
+                                <div class="icon-line"></div>
+                                <div class="icon-line"></div>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="answer-text">
+                                基本アクセス：月額¥29,800（体験モード）<br>
+                                フルレジデンス：月額¥89,800（完全移住モード）<br>
+                                プレミアム：月額¥149,800（時空間編集権限付き）<br>
+                                ※初回体験は72時間無料
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="question-text">現実世界との違いは？</span>
+                            <div class="question-icon">
+                                <div class="icon-line"></div>
+                                <div class="icon-line"></div>
+                            </div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="answer-text">
+                                現実世界では物理法則に従う必要がありますが、MetaCityでは想像力だけが制約です。重力、時間、距離、外見、すべてを自由にコントロールできます。また、感情や記憶も編集可能で、最適化された人生を送ることができます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Access Portal -->
+            <div class="access-portal">
+                <div class="portal-card glass-card dimension-card">
+                    <div class="portal-header">
+                        <h3 class="portal-title hologram-text">Welcome to MetaCity 2049</h3>
+                        <p class="portal-subtitle">新しい人生への扉が開かれました</p>
+                    </div>
+                    
+                    <!-- カウントダウン（超未来設定） -->
+                    <div class="countdown-container">
+                        <h4 class="countdown-title">Next Portal Opening</h4>
+                        <div class="countdown-timer" id="countdown">
+                            <div class="time-unit">
+                                <span class="time-value" id="days">00</span>
+                                <span class="time-label">DAYS</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="hours">00</span>
+                                <span class="time-label">HOURS</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="minutes">00</span>
+                                <span class="time-label">MINUTES</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="seconds">00</span>
+                                <span class="time-label">SECONDS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-actions">
+                        <button class="quantum-btn primary large" id="startExperience">
+                            <span class="btn-text">無料体験を開始</span>
+                            <div class="btn-energy"></div>
+                        </button>
+                        <button class="quantum-btn secondary large" id="learnMore">
+                            <span class="btn-text">詳細資料をダウンロード</span>
+                        </button>
+                    </div>
+                    
+                    <div class="safety-note">
+                        <p class="note-text">
+                            ⚠️ 仮想移住体験は、現実認識に影響を与える可能性があります。<br>
+                            事前に健康診断と心理カウンセリングをお受けください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定アクセスボタン -->
+    <div class="fixed-portal-access" id="fixedPortal">
+        <button class="portal-btn quantum-btn">
+            <span class="btn-text">Enter MetaCity</span>
+            <div class="btn-energy"></div>
+        </button>
+    </div>
+
+    <!-- カスタムカーソル -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-inner"></div>
+        <div class="cursor-outer"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

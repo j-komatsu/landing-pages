@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- ここにジム名 -->Elite Fitness Gym - 人生が変わる、60日間の挑戦</title>
+    <meta name="description" content="パーソナルトレーニングで理想の体を手に入れませんか？無料体験実施中。累計会員数1000名突破、平均-8kg達成の実績。">
+    <meta property="og:title" content="Elite Fitness Gym - 人生が変わる、60日間の挑戦">
+    <meta property="og:description" content="パーソナルトレーニングで理想の体を手に入れませんか？無料体験実施中。">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダーナビゲーション -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <span class="logo-text"><!-- ここにジム名 -->Elite Fitness</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#results" class="nav-link">実績</a>
+                    <a href="#trainers" class="nav-link">トレーナー</a>
+                    <a href="#plans" class="nav-link">料金プラン</a>
+                    <a href="#voices" class="nav-link">お客様の声</a>
+                    <a href="#contact" class="nav-link">体験予約</a>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Heroセクション - フルスクリーン背景 -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero.jpg" alt="<!-- ここにジム風景 -->ジム風景・トレーニング風景の動画または高画質写真" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <div class="hero-badge">✨ 無料体験実施中</div>
+                    <h1 class="hero-title">
+                        <!-- ここにキャッチコピー -->
+                        <span class="main-catch">人生が変わる、60日間の挑戦</span>
+                        <span class="sub-catch">プロのパーソナルトレーナーと理想の体を手に入れる</span>
+                    </h1>
+                    <p class="hero-description">
+                        科学的根拠に基づいたトレーニングと食事指導で、<br>
+                        あなたの体を確実に変えます。初回無料体験で実感してください。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary pulse-btn">💪 無料体験予約はこちら</a>
+                        <a href="#" class="btn btn-secondary line-btn">📱 LINEで相談</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1000">0</span>
+                            <span class="stat-label">累計会員数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-label">平均減量(kg)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="95">0</span>
+                            <span class="stat-label">満足度(%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta">
+        <a href="#" class="fixed-btn trial-btn">💪 無料体験</a>
+        <a href="#" class="fixed-btn line-btn">📱 LINE相談</a>
+    </div>
+
+    <!-- ビフォーアフター紹介セクション -->
+    <section class="before-after-section" id="before-after">
+        <div class="container">
+            <h2 class="section-title">🏆 驚きの変化を実感</h2>
+            <div class="before-after-grid">
+                <div class="ba-item">
+                    <div class="ba-comparison">
+                        <div class="ba-before">
+                            <img src="images/before1.jpg" alt="<!-- ここにBefore写真 -->ビフォー写真1" loading="lazy">
+                            <div class="ba-label before-label">Before</div>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/after1.jpg" alt="<!-- ここにAfter写真 -->アフター写真1" loading="lazy">
+                            <div class="ba-label after-label">After</div>
+                        </div>
+                    </div>
+                    <div class="ba-results">
+                        <h3>田中さん（30代男性）</h3>
+                        <div class="result-stats">
+                            <div class="result-item">
+                                <span class="result-number" data-count="12">0</span>
+                                <span class="result-unit">kg減量</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number" data-count="8">0</span>
+                                <span class="result-unit">%体脂肪率減</span>
+                            </div>
+                        </div>
+                        <p class="result-comment">
+                            <!-- ここに実績データ -->
+                            「60日間で-12kg達成！体脂肪率も-8%で理想の体型に。
+                            トレーナーさんのおかげで人生が変わりました。」
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="ba-item">
+                    <div class="ba-comparison">
+                        <div class="ba-before">
+                            <img src="images/before2.jpg" alt="<!-- ここにBefore写真 -->ビフォー写真2" loading="lazy">
+                            <div class="ba-label before-label">Before</div>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/after2.jpg" alt="<!-- ここにAfter写真 -->アフター写真2" loading="lazy">
+                            <div class="ba-label after-label">After</div>
+                        </div>
+                    </div>
+                    <div class="ba-results">
+                        <h3>佐藤さん（40代女性）</h3>
+                        <div class="result-stats">
+                            <div class="result-item">
+                                <span class="result-number" data-count="9">0</span>
+                                <span class="result-unit">kg減量</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number" data-count="6">0</span>
+                                <span class="result-unit">%体脂肪率減</span>
+                            </div>
+                        </div>
+                        <p class="result-comment">
+                            <!-- ここに実績データ -->
+                            「産後太りに悩んでいましたが、-9kg達成！
+                            無理のない食事指導で健康的に痩せることができました。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績・信頼獲得セクション -->
+    <section class="achievements-section" id="results">
+        <div class="container">
+            <h2 class="section-title">📊 これまでの成果</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">👥</div>
+                    <div class="achievement-number" data-count="1200">0</div>
+                    <div class="achievement-label">累計会員数</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">📈</div>
+                    <div class="achievement-number" data-count="8.5">0</div>
+                    <div class="achievement-label">平均減量(kg)</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-number" data-count="95">0</div>
+                    <div class="achievement-label">満足度(%)</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-number" data-count="15">0</div>
+                    <div class="achievement-label">トレーナー歴(年)</div>
+                </div>
+            </div>
+            
+            <!-- メディア掲載・企業ロゴスライダー -->
+            <div class="media-section">
+                <h3>メディア掲載実績</h3>
+                <div class="swiper media-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/logo1.png" alt="メディアロゴ1" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/logo2.png" alt="メディアロゴ2" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/logo3.png" alt="メディアロゴ3" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/logo4.png" alt="メディアロゴ4" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/logo5.png" alt="メディアロゴ5" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- トレーナー紹介セクション -->
+    <section class="trainers-section" id="trainers">
+        <div class="container">
+            <h2 class="section-title">👨‍💼 プロフェッショナルトレーナー</h2>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="images/trainer-1.jpg" alt="トレーナー1" loading="lazy">
+                        <div class="trainer-badge">チーフトレーナー</div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3 class="trainer-name">山田 健太郎</h3>
+                        <p class="trainer-title">NSCA-CPT / 管理栄養士</p>
+                        <p class="trainer-experience">トレーナー歴12年</p>
+                        <p class="trainer-description">
+                            大学でスポーツ科学を専攻し、数多くのアスリートを指導。
+                            科学的根拠に基づいたトレーニングと食事指導が得意。
+                        </p>
+                        <div class="trainer-specialties">
+                            <span class="specialty-tag">減量指導</span>
+                            <span class="specialty-tag">筋力向上</span>
+                            <span class="specialty-tag">食事指導</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="images/trainer-2.jpg" alt="トレーナー2" loading="lazy">
+                        <div class="trainer-badge">シニアトレーナー</div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3 class="trainer-name">鈴木 美咲</h3>
+                        <p class="trainer-title">JATI-ATI / ヨガインストラクター</p>
+                        <p class="trainer-experience">トレーナー歴8年</p>
+                        <p class="trainer-description">
+                            女性の体づくりのスペシャリスト。産後ダイエットから
+                            美ボディメイクまで幅広く対応。優しく丁寧な指導が評判。
+                        </p>
+                        <div class="trainer-specialties">
+                            <span class="specialty-tag">女性指導</span>
+                            <span class="specialty-tag">ボディメイク</span>
+                            <span class="specialty-tag">ヨガ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="images/trainer-3.jpg" alt="トレーナー3" loading="lazy">
+                        <div class="trainer-badge">トレーナー</div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3 class="trainer-name">佐藤 雄大</h3>
+                        <p class="trainer-title">NSCA-CSCS / 理学療法士</p>
+                        <p class="trainer-experience">トレーナー歴6年</p>
+                        <p class="trainer-description">
+                            理学療法士の知識を活かした機能改善トレーニングが専門。
+                            怪我の予防からパフォーマンス向上まで総合的にサポート。
+                        </p>
+                        <div class="trainer-specialties">
+                            <span class="specialty-tag">機能改善</span>
+                            <span class="specialty-tag">怪我予防</span>
+                            <span class="specialty-tag">リハビリ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コース紹介・料金プランセクション -->
+    <section class="plans-section" id="plans">
+        <div class="container">
+            <h2 class="section-title">💎 料金プラン</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">ベーシックプラン</h3>
+                        <p class="plan-subtitle">初心者におすすめ</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount">¥29,800</span>
+                        <span class="price-period">/ 月</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">月8回セッション（週2回）</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">食事指導</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">体組成測定</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">LINEサポート</span>
+                        </div>
+                    </div>
+                    <a href="#" class="plan-btn">このコースを体験する</a>
+                </div>
+                
+                <div class="plan-card popular">
+                    <div class="plan-badge">人気No.1</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">プレミアムプラン</h3>
+                        <p class="plan-subtitle">本気で変わりたい方へ</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount">¥49,800</span>
+                        <span class="price-period">/ 月</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">月12回セッション（週3回）</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">パーソナル食事指導</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">体組成測定（週1回）</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">24時間LINEサポート</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">サプリメント提供</span>
+                        </div>
+                    </div>
+                    <a href="#" class="plan-btn">このコースを体験する</a>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">VIPプラン</h3>
+                        <p class="plan-subtitle">最高の結果を求める方へ</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount">¥79,800</span>
+                        <span class="price-period">/ 月</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">月16回セッション（週4回）</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">完全オーダーメイド指導</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">毎日体組成測定</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">専属トレーナー</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">プレミアムサプリメント</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">アフターフォロー1年間</span>
+                        </div>
+                    </div>
+                    <a href="#" class="plan-btn">このコースを体験する</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 受講者の声セクション -->
+    <section class="voices-section" id="voices">
+        <div class="container">
+            <h2 class="section-title">💬 受講者の声</h2>
+            <div class="swiper voices-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/voice1.jpg" alt="受講者の声1" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「3ヶ月で-15kg達成！トレーナーさんが親身になって指導してくれて、
+                                    無理なく続けることができました。食事指導も分かりやすく、
+                                    一生使える知識を身につけることができました。」
+                                </p>
+                                <div class="voice-author">
+                                    <span class="author-name">高橋 太郎さん</span>
+                                    <span class="author-age">（35歳・会社員）</span>
+                                </div>
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">-15kg達成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/voice2.jpg" alt="受講者の声2" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「運動経験ゼロでしたが、丁寧に指導してもらい2ヶ月で-8kg！
+                                    体型だけでなく、体力もついて日常生活が楽になりました。
+                                    女性トレーナーさんなので相談しやすかったです。」
+                                </p>
+                                <div class="voice-author">
+                                    <span class="author-name">田中 花子さん</span>
+                                    <span class="author-age">（28歳・事務職）</span>
+                                </div>
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">-8kg達成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/voice3.jpg" alt="受講者の声3" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「40代になって代謝が落ちて悩んでいましたが、
+                                    科学的なアプローチで確実に結果が出ました。-10kg達成して
+                                    20代の頃の体型を取り戻せました！」
+                                </p>
+                                <div class="voice-author">
+                                    <span class="author-name">山田 美咲さん</span>
+                                    <span class="author-age">（42歳・主婦）</span>
+                                </div>
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">-10kg達成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/voice4.jpg" alt="受講者の声4" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「筋トレに興味があったけど一人では続かず...。
+                                    こちらに通い始めて4ヶ月、筋肉量も増えて理想の体型に！
+                                    トレーナーさんのモチベーション管理が素晴らしいです。」
+                                </p>
+                                <div class="voice-author">
+                                    <span class="author-name">佐藤 雅人さん</span>
+                                    <span class="author-age">（29歳・IT関係）</span>
+                                </div>
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">筋量UP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ（よくある質問）セクション -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">❓ よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>運動初心者でも大丈夫ですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、大丈夫です。お一人お一人のレベルに合わせたプログラムを作成いたします。運動経験がない方でも安心してご参加いただけるよう、基礎から丁寧に指導いたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>食事制限はきついですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>極端な食事制限は行いません。栄養バランスを考慮した、持続可能な食事指導を行います。お客様のライフスタイルに合わせて、無理のない範囲で改善提案をいたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>どのくらいの期間で効果が出ますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>個人差はありますが、多くの方が2ヶ月程度で体型の変化を実感されています。体重だけでなく、体脂肪率や筋肉量の変化も含めて総合的に評価いたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>予約の変更やキャンセルはできますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>前日までにご連絡いただければ、予約の変更・キャンセルが可能です。当日キャンセルの場合は1回分消化となりますので、ご了承ください。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>無料体験では何をしますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>体組成測定、カウンセリング、実際のトレーニング体験を約60分で行います。お客様の目標や現在の状況をヒアリングし、最適なプログラムをご提案いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終CTAセクション -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">💪 理想の体を手に入れませんか？</h2>
+                <p class="cta-subtitle">今なら無料体験実施中！まずはお気軽にお試しください。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary large-btn pulse-btn">🎯 今すぐ無料体験を予約</a>
+                    <a href="#" class="btn btn-secondary large-btn line-btn">📱 LINEで気軽に相談</a>
+                </div>
+                <div class="cta-note">
+                    <p>📞 お電話でのお問い合わせ：<strong>0120-123-456</strong></p>
+                    <p>🕒 受付時間：平日 9:00-22:00 / 土日祝 9:00-19:00</p>
+                    <p>🎁 今なら入会金50%OFF キャンペーン実施中！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

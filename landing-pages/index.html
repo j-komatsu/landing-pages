@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランディングページ コレクション - ポートフォリオ</title>
+    <meta name="description" content="様々な業界に対応したランディングページテンプレート集。ポートフォリオとして公開可能な品質で作成されています。">
+    <meta name="keywords" content="ランディングページ,LP,テンプレート,ポートフォリオ,ウェブデザイン">
+    <meta name="author" content="Landing Page Portfolio">
+    <meta name="robots" content="index,follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/landing-pages/">
+    <meta property="og:title" content="ランディングページ コレクション - ポートフォリオ">
+    <meta property="og:description" content="様々な業界に対応したランディングページテンプレート集。ポートフォリオとして公開可能な品質で作成されています。">
+    <meta property="og:image" content="https://example.com/landing-pages/images/portfolio-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/landing-pages/">
+    <meta property="twitter:title" content="ランディングページ コレクション - ポートフォリオ">
+    <meta property="twitter:description" content="様々な業界に対応したランディングページテンプレート集。ポートフォリオとして公開可能な品質で作成されています。">
+    <meta property="twitter:image" content="https://example.com/landing-pages/images/portfolio-og.jpg">
+    
+    <link rel="canonical" href="https://example.com/landing-pages/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 0 0 40px;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .lp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .lp-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .lp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .lp-card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .lp-card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .lp-card-industry {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .lp-card-body {
+            padding: 20px;
+        }
+
+        .lp-card-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .lp-card-features {
+            margin-bottom: 20px;
+        }
+
+        .lp-card-features h4 {
+            font-size: 1rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .lp-card-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lp-card-features li {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 4px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .lp-card-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .lp-card-tech {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: #f0f2f5;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .lp-card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer-content {
+            color: #666;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            .stats {
+                gap: 15px;
+            }
+
+            .stat-item {
+                padding: 10px 15px;
+            }
+
+            .category-section {
+                padding: 20px;
+            }
+
+            .lp-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-card-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">ランディングページ コレクション</h1>
+                <p class="header-subtitle">様々な業界に対応したプロフェッショナルなLPテンプレート集</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">31</div>
+                        <div class="stat-label">LP テンプレート</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">業界カテゴリ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">レスポンシブ対応</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- ビジネスサービス -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🏢</div>
+                    <h2 class="category-title">ビジネスサービス</h2>
+                </div>
+                <p class="category-description">
+                    企業向けサービスのランディングページ。専門性と信頼性を重視したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">法律・会計事務所</h3>
+                            <p class="lp-card-industry">法律・会計業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                法律・会計事務所向けの相談予約LP。専門性と信頼性を重視した構成になっています。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>専門家プロフィール紹介</li>
+                                    <li>4つの主要サービス紹介</li>
+                                    <li>3ステップの相談フロー</li>
+                                    <li>お客様の声とFAQ</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./business-services/legal-services-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./business-services/legal-services-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">B2Bウェブサービス</h3>
+                            <p class="lp-card-industry">B2B SaaS業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                企業向けSaaS・ソフトウェアのリード獲得LP。機能紹介と導入事例を中心とした構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>問題解決型のメッセージング</li>
+                                    <li>4つの主要機能紹介</li>
+                                    <li>導入事例とROI実績</li>
+                                    <li>無料トライアル・資料請求CTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./business-services/b2b-service-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./business-services/b2b-service-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">世界初発表カウントダウン</h3>
+                            <p class="lp-card-industry">SaaS・イノベーション事業発表</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                世界初発表向けの没入型近未来カウントダウンLP。リアルタイムタイマー・粒子エフェクト・ネオンデザインで緊張感を演出し、事前登録・発表会参加を促進。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ミッドナイトブラック＋ネオンブルー＋エネルギーレッド</li>
+                                    <li>リアルタイムカウントダウンタイマー</li>
+                                    <li>Canvas粒子エフェクト・ライトパーティクル</li>
+                                    <li>GSAP没入型アニメーション</li>
+                                    <li>事前登録特典・発表会参加CTA</li>
+                                    <li>革新ポイントSwiper・企業ロゴ展示</li>
+                                    <li>Orbitronフォントで未来感演出</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Canvas</span>
+                                <span class="tech-badge">Swiper.js</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./business-services/service-lp75/" class="btn btn-primary">デモを見る</a>
+                                <a href="./business-services/service-lp75/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 美容・健康 -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">💄</div>
+                    <h2 class="category-title">美容・健康</h2>
+                </div>
+                <p class="category-description">
+                    美容・健康・ウェルネス業界のランディングページ。視覚的な魅力と感情的な訴求を重視したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">美容サロン</h3>
+                            <p class="lp-card-industry">美容・サロン業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                美容サロン向けの予約促進LP。初回限定特典で新規顧客獲得を目指すデザインです。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>初回限定50%OFF訴求</li>
+                                    <li>フェイシャル・ボディ・ネイル紹介</li>
+                                    <li>お客様の声とFAQ</li>
+                                    <li>LINE・電話予約CTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./beauty-health/beauty-salon-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./beauty-health/beauty-salon-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">美容サロン（フェミニン）</h3>
+                            <p class="lp-card-industry">美容・エステ・ネイル業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                フェミニン系デザインの美容サロンLP。フェイシャル・ネイル・エステの複合サービスに対応した予約促進デザインです。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>フェミニン系配色（淡いピンク基調）</li>
+                                    <li>サービスタブ切り替え機能</li>
+                                    <li>お客様の声スライダー</li>
+                                    <li>FAQアコーディオン</li>
+                                    <li>固定予約ボタン（電話・LINE）</li>
+                                    <li>スクロール連動アニメーション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./beauty-health/beauty-lp10/" class="btn btn-primary">デモを見る</a>
+                                <a href="./beauty-health/beauty-lp10/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">美容サロン（圧倒的個性）</h3>
+                            <p class="lp-card-industry">Z世代向け美容サロン</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                「こんなLP見たことない！」と驚かせる超ぶっとびデザイン。ネオンカラー・GSAP・Swiperを駆使したZ世代向け美容サロンLP。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ネオンカラー・グラデーション背景</li>
+                                    <li>マウスストーカー（キラキラ効果）</li>
+                                    <li>GSAP大胆アニメーション</li>
+                                    <li>Swiperループスライダー</li>
+                                    <li>カウントアップ機能</li>
+                                    <li>パララックス・視差効果</li>
+                                    <li>Instagram連携・SNS特化</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./beauty-health/beauty-lp50/" class="btn btn-primary">デモを見る</a>
+                                <a href="./beauty-health/beauty-lp50/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">美容サロン（ジブリ風）</h3>
+                            <p class="lp-card-industry">癒し・ファンタジー美容サロン</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                ジブリ風の癒しとファンタジーを感じる美容サロンLP。森の中の隠れ家のような空間で、心と身体の美しさを整える特別な体験を提供。魔法のような癒し効果を演出。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>パステルグリーン・スカイブルー・生成りホワイト配色</li>
+                                    <li>森のパーティクル・浮遊する葉っぱエフェクト</li>
+                                    <li>トトロ風枠・魔女の小部屋風デザイン</li>
+                                    <li>手書き風フォント（Klee One）で温かみ演出</li>
+                                    <li>優しいGSAPアニメーション・パララックス効果</li>
+                                    <li>魔法の光エフェクト付きボタン</li>
+                                    <li>自然音エフェクト対応・癒し空間紹介</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./beauty-health/beauty-lp90/" class="btn btn-primary">デモを見る</a>
+                                <a href="./beauty-health/beauty-lp90/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">格安カット専門店</h3>
+                            <p class="lp-card-industry">時短美容・格安カットサロン</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                格安カット・時短美容サービス向けのスピード＆コスパ重視LP。「早い・安い・便利」を瞬時に伝え、忙しい社会人やファミリー層にアピール。明快料金システムで安心感を提供。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ビビッドレッド・クリアブルー・ホワイトでスッキリ感</li>
+                                    <li>無駄のないフラットデザイン・スピード感重視</li>
+                                    <li>明確な料金表示（基本・学生・プレミアム）</li>
+                                    <li>スピーディーなGSAPアニメーション</li>
+                                    <li>カウントアップ統計（施術数・時間・満足度）</li>
+                                    <li>スピードライン・フラッシュエフェクト</li>
+                                    <li>LINE予約・順番待ち予約システム対応</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./beauty-health/beauty-lp91/" class="btn btn-primary">デモを見る</a>
+                                <a href="./beauty-health/beauty-lp91/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育・人材 -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">📚</div>
+                    <h2 class="category-title">教育・人材</h2>
+                </div>
+                <p class="category-description">
+                    教育・スキルアップ・人材採用のランディングページ。成長・キャリアアップを訴求するデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">オンライン教育</h3>
+                            <p class="lp-card-industry">教育・スクール業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                スクール・教育サービスの受講生募集LP。収益性とスキル習得を重視した構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>収益実績による訴求</li>
+                                    <li>学習サポート体制紹介</li>
+                                    <li>受講生の成功事例</li>
+                                    <li>無料体験・LINE相談CTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./education-recruitment/online-education-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./education-recruitment/online-education-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">求人・採用</h3>
+                            <p class="lp-card-industry">人材・採用業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                企業の採用活動向けの応募者獲得LP。複数職種の同時募集に対応した構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>複数職種同時募集対応</li>
+                                    <li>働く環境・福利厚生紹介</li>
+                                    <li>現役社員の声</li>
+                                    <li>電話・LINE・メール応募</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./education-recruitment/job-recruitment-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./education-recruitment/job-recruitment-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- イベント・ポートフォリオ -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🎨</div>
+                    <h2 class="category-title">イベント・ポートフォリオ</h2>
+                </div>
+                <p class="category-description">
+                    イベント・セミナー・個人ブランディングのランディングページ。参加・関心を促すデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">イベント・セミナー</h3>
+                            <p class="lp-card-industry">イベント・セミナー業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                イベント・セミナーの参加者募集LP。詳細な開催情報と申し込み促進を重視した構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>イベント詳細の明確表示</li>
+                                    <li>講演者・講師紹介</li>
+                                    <li>詳細なスケジュール</li>
+                                    <li>会場アクセス情報</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./events-portfolio/event-conference-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./events-portfolio/event-conference-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">クリエイティブポートフォリオ</h3>
+                            <p class="lp-card-industry">デザイン・クリエイティブ業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                デザイナー・クリエイター向けのポートフォリオLP。作品紹介とクライアント獲得を目指す構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>個人ブランディング重視</li>
+                                    <li>スキルレベル可視化</li>
+                                    <li>フィルタリング機能付きポートフォリオ</li>
+                                    <li>SNS連携・問い合わせCTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./events-portfolio/creative-portfolio-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./events-portfolio/creative-portfolio-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EC・レビュー -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🛒</div>
+                    <h2 class="category-title">EC・レビュー</h2>
+                </div>
+                <p class="category-description">
+                    EC・商品販売・レビューサイトのランディングページ。購入促進と信頼性向上を重視したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">商品レビュー</h3>
+                            <p class="lp-card-industry">EC・レビュー業界</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                商品レビュー・比較サイト向けのLP。詳細レビューと購入促進を重視した構成です。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>星評価システム</li>
+                                    <li>インタラクティブレビュー表示</li>
+                                    <li>商品比較テーブル</li>
+                                    <li>購入に関するFAQ</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./ecommerce-review/product-review-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./ecommerce-review/product-review-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- レストラン・フード -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🍽️</div>
+                    <h2 class="category-title">レストラン・フード</h2>
+                </div>
+                <p class="category-description">
+                    飲食店・レストラン・カフェ向けのランディングページ。料理の魅力を伝え、予約促進を重視したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">飲食店向けLP</h3>
+                            <p class="lp-card-industry">レストラン・カフェ・居酒屋</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                スマホファースト設計による飲食店向けLP。料理写真を大きく活用し、LINE・電話予約への導線を明確にしています。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>メニュータブ切り替え機能</li>
+                                    <li>お客様の声スライダー</li>
+                                    <li>FAQアコーディオン</li>
+                                    <li>固定予約ボタン（電話・LINE）</li>
+                                    <li>スクロール連動アニメーション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp09/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp09/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">二郎系ラーメン店</h3>
+                            <p class="lp-card-industry">二郎系ラーメン・爆盛り系飲食店</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                二郎系ラーメン店向けの爆盛りインパクト型LP。圧倒的ボリューム感・ワイルドなデザインで食欲を刺激し、LINE予約・来店促進を実現。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>黒ベース＋黄色・赤のインパクト配色</li>
+                                    <li>GSAPヘビー感アニメーション</li>
+                                    <li>爆盛りメニューSwiper</li>
+                                    <li>カウントアップ（総食数・完食数）</li>
+                                    <li>二郎系初心者向けFAQ</li>
+                                    <li>固定CTA（LINE予約・地図）</li>
+                                    <li>オラつき感＋清潔感バランス</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp59/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp59/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">ハワイアンカフェ</h3>
+                            <p class="lp-card-industry">ハワイアンレストラン・南国カフェ</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                ハワイアンカフェ向けの南国癒し系LP。明るく開放的なデザインで旅行気分を演出し、リゾート体験を提供。ロコモコ・パンケーキ・アサイーボウルなどトロピカルメニューを魅力的に紹介。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ターコイズブルー＋コーラルピンクの南国カラー</li>
+                                    <li>GSAPふわっとフェードイン・波型スライドイン</li>
+                                    <li>トロピカル装飾アニメーション（🌺🍍🌴）</li>
+                                    <li>波のSVGアニメーション</li>
+                                    <li>手書き風フォント＋クリーンフォント</li>
+                                    <li>背景パララックス効果</li>
+                                    <li>リゾート空間紹介セクション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp60/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp60/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">昭和のラーメン屋</h3>
+                            <p class="lp-card-industry">昔ながらの中華そば・町中華・家族経営食堂</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                昔ながらの中華そば店向けのレトロ温もり系LP。昭和ノスタルジーと飾らない温かさを演出。地元常連客や家族連れに愛される、懐かしい雰囲気のデザイン。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>クリーム色＋レトロレッド＋ダークネイビー配色</li>
+                                    <li>明朝体フォントでレトロ感演出</li>
+                                    <li>控えめなフェードイン・スライドイン</li>
+                                    <li>固定情報バー（営業時間・電話・地図）</li>
+                                    <li>営業時間の動的更新機能</li>
+                                    <li>シンプルなメニューグリッド</li>
+                                    <li>年配層にも使いやすい設計</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp61/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp61/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">激辛ラーメン店</h3>
+                            <p class="lp-card-industry">蒙古タンメン中本風・激辛ラーメン専門店</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                蒙古タンメン中本風の激辛ラーメン専門店LP。炎のような辛さとうまさで挑戦者を募る熱烈デザイン。辛さレベル別メニュー・火炎エフェクト・挑戦統計で圧倒的インパクトを演出。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>燃えるような赤・炎のオレンジ・黒ベース配色</li>
+                                    <li>火炎パーティクルエフェクト</li>
+                                    <li>辛さレベル別メニュー表示</li>
+                                    <li>挑戦者実績カウントアップ</li>
+                                    <li>汗だくお客様の声スライダー</li>
+                                    <li>火花エフェクト付きボタン</li>
+                                    <li>勢いのあるGSAPアニメーション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp62/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp62/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">和食レストラン</h3>
+                            <p class="lp-card-industry">和食・会席料理・定食屋・居酒屋</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                和食の魅力満載・超人気店向けの上品で落ち着きのあるLP。四季折々の味覚と職人の技を全面に押し出し、季節メニュー・伝統的な和の美しさ・おもてなしの心を表現。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>白・深緑・朱赤・金で和の高級感と温かみ</li>
+                                    <li>桜の花びら・浮遊する葉っぱエフェクト</li>
+                                    <li>季節感を大切にした盛り付け風レイアウト</li>
+                                    <li>伝統的なフレーム・和風グロー演出</li>
+                                    <li>ゆったりとしたパララックス・フェードイン</li>
+                                    <li>明朝体フォントで和風の品格演出</li>
+                                    <li>和風のきらめきエフェクト付きボタン</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/food-lp99/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/food-lp99/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">クレイジーレストラン</h3>
+                            <p class="lp-card-industry">カフェ・居酒屋・バー・個性派レストラン</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                「一度見たら忘れない」「面白い」と感じさせる圧倒的インパクト型レストランLP。ネオンカラー×不規則デザインで楽しさを演出し、SNS拡散を最大化。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ネオンピンク・パープル・グリーンの大胆配色</li>
+                                    <li>ダンシング背景エフェクト（食べ物絵文字）</li>
+                                    <li>ワイドルアニメーション・クレイジーエントランス</li>
+                                    <li>メニュータブ切り替え（ランチ・ディナー・テイクアウト）</li>
+                                    <li>傾斜カード・不規則レイアウト</li>
+                                    <li>2099年カウントダウン・超未来設定</li>
+                                    <li>リップルエフェクト・コナミコマンド隠し機能</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">インパクトデザイン</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./restaurant-food/crazy-restaurant-lp49/" class="btn btn-primary">デモを見る</a>
+                                <a href="./restaurant-food/crazy-restaurant-lp49/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ゲーミング・eスポーツ -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🎮</div>
+                    <h2 class="category-title">ゲーミング・eスポーツ</h2>
+                </div>
+                <p class="category-description">
+                    eスポーツチーム・大会エントリー・ゲーミングデバイス紹介のランディングページ。ダークテーマ＋ネオンエフェクトで高級感と信頼感を演出し、プロフェッショナルな世界観を表現します。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">Elite Gaming Team LP</h3>
+                            <p class="lp-card-industry">eスポーツチーム・大会エントリー・ゲーミングデバイス</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                プロeスポーツチーム・大会エントリー・最新ゲーミングデバイス紹介に特化したダークテーマLP。ネオンエフェクト・パーティクル・エレクトリックボルトで近未来的な高級感を演出。チームメンバー紹介・大会情報・SNS風お客様の声を組み合わせた総合的なeスポーツポータル。
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">ダークテーマ</span>
+                                <span class="tech-badge">ネオンエフェクト</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./gaming-esports/esports-lp01/" class="btn btn-primary">デモを見る</a>
+                                <a href="./gaming-esports/esports-lp01/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 旅行・観光 -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🏖️</div>
+                    <h2 class="category-title">旅行・観光</h2>
+                </div>
+                <p class="category-description">
+                    旅行・ツアー会社向けのランディングページ。季節ツアー・キャンペーン特典を美しいビジュアルで紹介し、高級感と信頼感で予約促進を図ります。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">プレミアム季節ツアーLP</h3>
+                            <p class="lp-card-industry">旅行・ツアー会社・季節キャンペーン</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                季節ツアー・キャンペーン向けの高級感LP。フルスクリーン美しい旅行先背景、ツアープラン紹介、キャンペーン特典、フォトギャラリー、お客様の声を組み合わせた総合的な旅行サイト。白背景＋高級感ブルー＋アクセントオレンジで信頼感を演出。
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">高級感デザイン</span>
+                                <span class="tech-badge">IntersectionObserver</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./travel-tourism/travel-lp01/" class="btn btn-primary">デモを見る</a>
+                                <a href="./travel-tourism/travel-lp01/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LINE・SNS -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">📱</div>
+                    <h2 class="category-title">LINE・SNS</h2>
+                </div>
+                <p class="category-description">
+                    LINE登録誘導・SNS連携のランディングページ。遊び心のある動きと視覚的インパクトで登録数を最大化するデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">LINE登録LP（ポップ）</h3>
+                            <p class="lp-card-industry">LINE公式アカウント登録誘導</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                遊び心＋動きのあるモダンなデザインで視覚的インパクトを出し、LINE登録数を最大化するポップなLP。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>LINEグリーン＋ポップなアクセントカラー</li>
+                                    <li>GSAPスクロールアニメーション</li>
+                                    <li>Swiperスライダー（特典・口コミ）</li>
+                                    <li>タブ切り替え機能</li>
+                                    <li>FAQアコーディオン</li>
+                                    <li>背景パーティクル・泡アニメーション</li>
+                                    <li>固定CTA・複数登録ボタン</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./line-services/line-lp42/" class="btn btn-primary">デモを見る</a>
+                                <a href="./line-services/line-lp42/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- フィットネス・ジム -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">💪</div>
+                    <h2 class="category-title">フィットネス・ジム</h2>
+                </div>
+                <p class="category-description">
+                    パーソナルジム・フィットネス向けのランディングページ。体験申込・実績訴求・予約導線を強化し、高級感と信頼感を演出したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">Elite Fitness Gym LP</h3>
+                            <p class="lp-card-industry">パーソナルジム・フィットネス・体験申込</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                パーソナルジム・フィットネス向けの高級感と信頼感のあるランディングページ。モダン＋躍動感・ビフォーアフター活用で体験申込・予約導線を強化します。フルスクリーン背景・強いキャッチコピー・成果データカウントアップで確実に結果を出すトレーニングの魅力を訴求。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>高級感ネイビー＋CTAレッド＋アクセントゴールド</li>
+                                    <li>フルスクリーン背景・トレーニング風景</li>
+                                    <li>ビフォーアフター2カラム・スライドイン</li>
+                                    <li>受講者成果データ・カウントアップ表示</li>
+                                    <li>トレーナー紹介・料金プラン比較</li>
+                                    <li>Swiperスライダー・受講者の声</li>
+                                    <li>FAQアコーディオン・固定CTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">ScrollTrigger</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./fitness-gym/gym-lp01/" class="btn btn-primary">デモを見る</a>
+                                <a href="./fitness-gym/gym-lp01/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- アウトドア・キャンプ -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🏕️</div>
+                    <h2 class="category-title">アウトドア・キャンプ</h2>
+                </div>
+                <p class="category-description">
+                    アウトドア・キャンプ用品向けのランディングページ。新製品紹介・イベント告知・レビューLP。自然背景・パララックス・体験訴求が映える自然調和型デザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">NaturalGear キャンプ用品LP</h3>
+                            <p class="lp-card-industry">アウトドア・キャンプ用品・新製品紹介・体験レビュー</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                高級アウトドア・キャンプ用品の新製品紹介・イベント告知・レビューLP。自然背景・パララックス・体験訴求が映える自然調和型デザイン。フルスクリーン自然風景背景、パララックス効果で各特徴が浮かび上がる演出、横スクロールギャラリー、キャンペーンタイマー機能で製品購入・体験参加を促進。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>森グリーン＋アクセントオレンジ＋自然ブラウン配色</li>
+                                    <li>フルスクリーン自然風景背景（森・湖・山）</li>
+                                    <li>パララックス効果で立体感演出</li>
+                                    <li>横スクロールギャラリー（タッチスワイプ対応）</li>
+                                    <li>レビュー・体験談スライダー</li>
+                                    <li>キャンペーンタイマー機能付きイベント告知</li>
+                                    <li>自然パーティクルエフェクト・浮遊アニメーション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">ScrollTrigger</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">パララックス</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./outdoor-camping/camp-lp01/" class="btn btn-primary">デモを見る</a>
+                                <a href="./outdoor-camping/camp-lp01/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- フォトスタジオ・映像制作 -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">📸</div>
+                    <h2 class="category-title">フォトスタジオ・映像制作</h2>
+                </div>
+                <p class="category-description">
+                    フォトスタジオ・映像制作向けのランディングページ。SNSでバズることを前提にした撮影プラン訴求・予約獲得。写真映え・ポートフォリオ型デザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">BuzzStudio SNS映えLP</h3>
+                            <p class="lp-card-industry">フォトスタジオ・映像制作・SNSバズ・撮影プラン訴求</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                SNSでバズることを前提にしたフォトスタジオ・映像制作向けのランディングページ。写真映え・ポートフォリオ型デザインで撮影プラン訴求・予約獲得を実現。Instagram Stories風パステルグラデーション、TikTok風縦長スライダー、Instagram風ギャラリー、SNS風レビューで「即映え」をコンセプトに動的でキャッチーなデザインを実現。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>Instagram風ブランドカラー（ピンク・パープル・オレンジ）</li>
+                                    <li>3秒惹きつけエリア（GSAPタイプライター効果）</li>
+                                    <li>TikTok風縦長スライダー（人気タグ風プラン）</li>
+                                    <li>Instagram風ギャラリー（いいね・シェアアイコン）</li>
+                                    <li>SNS風スクリーンショット型レビュー</li>
+                                    <li>カウントダウンタイマー付きキャンペーン</li>
+                                    <li>SNSパーティクルエフェクト・シマーアニメーション</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">ScrollTrigger</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">タイプライター</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./photo-studio/studio-lp01/" class="btn btn-primary">デモを見る</a>
+                                <a href="./photo-studio/studio-lp01/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 自動車・モータースポーツ -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🏎️</div>
+                    <h2 class="category-title">自動車・モータースポーツ</h2>
+                </div>
+                <p class="category-description">
+                    モータースポーツ・車カスタムイベント向けのランディングページ。SNSバズを狙った黒×蛍光カラーのダイナミックなデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">モータースポーツ SNSバズLP</h3>
+                            <p class="lp-card-industry">モータースポーツ・車カスタムイベント</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                モータースポーツ・車カスタムイベント向けのSNSバズを狙ったランディングページ。黒×蛍光カラーでスピード感と迫力を表現し、TikTok世代をターゲットにしたダイナミックなデザインを採用。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>黒ベース（#0F0F0F）+ 蛍光色（イエロー、グリーン、ブルー、ピンク）</li>
+                                    <li>Hero背景動画 + 蛍光グラデーション + パーティクルエフェクト</li>
+                                    <li>TikTok風縦動画スライダー（Swiper.js 縦スクロール）</li>
+                                    <li>インパクトギャラリー（ホバーエフェクト + フィルタリング）</li>
+                                    <li>SNS連動エリア（シェアボタン + 特典表示システム）</li>
+                                    <li>参加者の声（SNS投稿風レビュースライダー）</li>
+                                    <li>カウントダウン機能 + 固定CTAボタン（スクロール追従）</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">ダークテーマ</span>
+                                <span class="tech-badge">ネオンエフェクト</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./automotive-motorsports/motorsport-snsbuzz-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./automotive-motorsports/motorsport-snsbuzz-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ペット・動物サービス -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🐾</div>
+                    <h2 class="category-title">ペット・動物サービス</h2>
+                </div>
+                <p class="category-description">
+                    ペットトリミング・ホテル・動物病院向けのランディングページ。Z世代をターゲットにしたトレンド感のあるデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">Z世代向けペットトレンドLP</h3>
+                            <p class="lp-card-industry">ペットトリミング・ホテル・Z世代向け</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                Z世代に人気のペットトリミング・ホテルサービス。TikTokトレンドカットから癒しのホテル体験まで、推しペットをさらにカワイくするLP。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>動くパステルグラデーション背景</li>
+                                    <li>TikTok風ショート動画ギャラリー</li>
+                                    <li>SNSスクショ風お客様の声</li>
+                                    <li>スワイプ可能なビフォーアフター比較</li>
+                                    <li>カウントダウン付きキャンペーン</li>
+                                    <li>常時固定CTA（LINE予約・Instagram）</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">Swiper.js</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./pet-services/pet-ztrend-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./pet-services/pet-ztrend-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 不動産・賃貸 -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🏠</div>
+                    <h2 class="category-title">不動産・賃貸</h2>
+                </div>
+                <p class="category-description">
+                    不動産・賃貸・民泊向けのランディングページ。物件診断、360°バーチャル見学、間取りクイズなどエンゲージメント機能が充実したデザインが特徴です。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">プレミアム不動産LP</h3>
+                            <p class="lp-card-industry">不動産・賃貸・民泊・エンゲージング機能</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                シンプルで高級感のあるデザインに「話題になりやすい面白い仕掛け」を組み合わせた体験型不動産LP。物件診断からバーチャル見学まで、SNSでシェアしたくなる機能が満載。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>ゴールド×ダークの高級感配色（#D4AF37, #111, #333）</li>
+                                    <li>3ステップ物件診断（予算・立地・間取り）</li>
+                                    <li>360°バーチャル見学（部屋切り替え機能）</li>
+                                    <li>間取りクイズ（5問構成・ゲーミフィケーション）</li>
+                                    <li>リアルタイム住宅ローンシミュレーター</li>
+                                    <li>YouTube動画埋め込み（レスポンシブ対応）</li>
+                                    <li>来店予約モーダル・固定CTA</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">AOS</span>
+                                <span class="tech-badge">Chart.js</span>
+                                <span class="tech-badge">高級感デザイン</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./real-estate/engaging-realestate-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./real-estate/engaging-realestate-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- バーチャル・メタバース -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">🌐</div>
+                    <h2 class="category-title">バーチャル・メタバース</h2>
+                </div>
+                <p class="category-description">
+                    仮想現実・メタバース・未来技術向けのランディングページ。3Dエフェクト・ガラスモーフィズム・ホログラム効果で次世代デジタル体験を演出します。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">MetaCity 2049 仮想移住体験</h3>
+                            <p class="lp-card-industry">バーチャルリアリティ・メタバース・仮想移住</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                2049年の仮想都市への移住体験LP。3Dパーティクル・ガラスモーフィズム・ホログラム効果で未来的なデジタル体験を提供。現実と仮想の境界を超越した新しいライフスタイルを提案。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>Three.js 3Dパーティクルシステム</li>
+                                    <li>ガラスモーフィズム・ネオホログラフィック</li>
+                                    <li>GSAP高度アニメーション・量子エフェクト</li>
+                                    <li>カスタムカーソル・ホログラムスキャンライン</li>
+                                    <li>仮想住民証言・体験ギャラリー</li>
+                                    <li>2099年カウントダウン・超未来設定</li>
+                                    <li>統計カウンター・FAQ量子アコーディオン</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Three.js</span>
+                                <span class="tech-badge">GSAP</span>
+                                <span class="tech-badge">ガラスモーフィズム</span>
+                                <span class="tech-badge">3Dエフェクト</span>
+                                <span class="tech-badge">Mobile-First</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./virtual-metaverse/virtual-metacity-immersion-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./virtual-metaverse/virtual-metacity-immersion-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 汎用テンプレート -->
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="category-icon">📋</div>
+                    <h2 class="category-title">汎用テンプレート</h2>
+                </div>
+                <p class="category-description">
+                    様々な業界で使用可能な汎用テンプレート。基本的なLP構成要素を完備しており、カスタマイズして使用できます。
+                </p>
+                <div class="lp-grid">
+                    <div class="lp-card">
+                        <div class="lp-card-header">
+                            <h3 class="lp-card-title">汎用サービス</h3>
+                            <p class="lp-card-industry">汎用（全業界対応）</p>
+                        </div>
+                        <div class="lp-card-body">
+                            <p class="lp-card-description">
+                                業界を問わず使用可能な汎用テンプレート。基本的なLP構成要素を備えており、カスタマイズして使用できます。
+                            </p>
+                            <div class="lp-card-features">
+                                <h4>主な特徴</h4>
+                                <ul>
+                                    <li>業界を問わず使用可能</li>
+                                    <li>3つのサービス紹介セクション</li>
+                                    <li>お客様の声とFAQ</li>
+                                    <li>シンプルで清潔なデザイン</li>
+                                </ul>
+                            </div>
+                            <div class="lp-card-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="lp-card-actions">
+                                <a href="./templates/generic-service-lp/" class="btn btn-primary">デモを見る</a>
+                                <a href="./templates/generic-service-lp/README.md" class="btn btn-secondary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="./README.md">ドキュメント</a>
+                    <a href="https://github.com/username/landing-pages">GitHub</a>
+                    <a href="mailto:contact@example.com">お問い合わせ</a>
+                </div>
+                <p>&copy; 2024 Landing Page Collection. All rights reserved.</p>
+                <p>ポートフォリオ目的での使用・改変・公開を許可します。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

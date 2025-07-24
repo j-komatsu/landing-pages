@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- ここにスタジオ名 -->BuzzStudio - SNSで映える、あなたの人生の一枚を</title>
+    <meta name="description" content="SNSでバズる写真を撮影するフォトスタジオ。Instagram、TikTok映えするプロフィール写真・カップルフォト・推し活撮影プランをご提供。">
+    <meta property="og:title" content="BuzzStudio - SNSで映える、あなたの人生の一枚を">
+    <meta property="og:description" content="SNSでバズる写真を撮影するフォトスタジオ。Instagram、TikTok映えするプロフィール写真・カップルフォト・推し活撮影プランをご提供。">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Noto+Sans+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダーナビゲーション -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <span class="logo-text"><!-- ここにスタジオ名 -->BuzzStudio</span>
+                    <span class="logo-emoji">📸</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#plans" class="nav-link">プラン</a>
+                    <a href="#gallery" class="nav-link">ギャラリー</a>
+                    <a href="#reviews" class="nav-link">口コミ</a>
+                    <a href="#campaign" class="nav-link">キャンペーン</a>
+                    <a href="#contact" class="nav-link">予約</a>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Heroセクション - Instagram Stories風パステルグラデーション -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-bg"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <div class="hero-badge">✨ Instagram話題沸騰中</div>
+                    <h1 class="hero-title">
+                        <!-- ここにメインキャッチ -->
+                        <span class="main-catch">SNSで映える、あなたの人生の一枚を</span>
+                        <span class="sub-catch">撮影したその日に映える投稿が完成</span>
+                    </h1>
+                    <p class="hero-description">
+                        プロカメラマンが手がける、バズる写真撮影スタジオ<br>
+                        あなたの魅力を最大限に引き出し、SNSで注目される一枚をお撮りします
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#plans" class="btn btn-primary pulse-btn">📱 Instagram話題のプランを見る</a>
+                        <a href="#" class="btn btn-line">💬 LINEで撮影予約</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3秒惹きつけエリア - ファーストインパクト -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon">📈</div>
+                    <div class="impact-text" id="impact-text-1">SNSで1000いいね突破者続出！</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">🎉</div>
+                    <div class="impact-text" id="impact-text-2">最新プラン20%オフ開催中</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">⚡</div>
+                    <div class="impact-text" id="impact-text-3">撮影当日に映える投稿完成</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta">
+        <a href="#gallery" class="fixed-btn sns-btn">📸 SNS投稿を見る</a>
+        <a href="#" class="fixed-btn line-btn">💬 LINE予約</a>
+    </div>
+
+    <!-- プラン紹介セクション - TikTok風縦長スライダー -->
+    <section class="plans-section" id="plans">
+        <div class="container">
+            <h2 class="section-title">🔥 バズる撮影プラン</h2>
+            <p class="section-subtitle">SNSで話題の人気プランをご紹介</p>
+            
+            <div class="swiper plans-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="plan-card">
+                            <div class="plan-tag">#カップルフォト</div>
+                            <div class="plan-image">
+                                <img src="images/plan-couple.jpg" alt="<!-- ここに一押しプラン -->カップルフォトプラン" loading="lazy">
+                                <div class="plan-overlay">
+                                    <div class="plan-stats">
+                                        <span class="likes">❤️ 2.3K</span>
+                                        <span class="shares">📤 856</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <h3 class="plan-title">カップルフォト映えプラン</h3>
+                                <p class="plan-description">
+                                    <!-- ここに一押しプラン -->
+                                    Instagram・TikTokで話題沸騰中！
+                                    ラブラブ感満載の映える写真をプロが撮影
+                                </p>
+                                <div class="plan-price">
+                                    <span class="original-price">¥15,000</span>
+                                    <span class="current-price">¥12,000</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">このプランで予約</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="plan-card">
+                            <div class="plan-tag">#推し活撮影</div>
+                            <div class="plan-image">
+                                <img src="images/plan-oshi.jpg" alt="推し活撮影プラン" loading="lazy">
+                                <div class="plan-overlay">
+                                    <div class="plan-stats">
+                                        <span class="likes">❤️ 1.8K</span>
+                                        <span class="shares">📤 642</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <h3 class="plan-title">推し活撮影プラン</h3>
+                                <p class="plan-description">
+                                    推しグッズと一緒に映える写真を！
+                                    オタ活女子に大人気のフォトプラン
+                                </p>
+                                <div class="plan-price">
+                                    <span class="original-price">¥12,000</span>
+                                    <span class="current-price">¥9,600</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">このプランで予約</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="plan-card">
+                            <div class="plan-tag">#プロフィール写真</div>
+                            <div class="plan-image">
+                                <img src="images/plan-profile.jpg" alt="プロフィール写真プラン" loading="lazy">
+                                <div class="plan-overlay">
+                                    <div class="plan-stats">
+                                        <span class="likes">❤️ 3.1K</span>
+                                        <span class="shares">📤 1.2K</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <h3 class="plan-title">プロフィール写真プラン</h3>
+                                <p class="plan-description">
+                                    SNSアイコンに最適！プロが撮る
+                                    印象的なプロフィール写真
+                                </p>
+                                <div class="plan-price">
+                                    <span class="original-price">¥8,000</span>
+                                    <span class="current-price">¥6,400</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">このプランで予約</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="plan-card">
+                            <div class="plan-tag">#友達フォト</div>
+                            <div class="plan-image">
+                                <img src="images/plan-friends.jpg" alt="友達フォトプラン" loading="lazy">
+                                <div class="plan-overlay">
+                                    <div class="plan-stats">
+                                        <span class="likes">❤️ 2.7K</span>
+                                        <span class="shares">📤 934</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <h3 class="plan-title">友達フォトプラン</h3>
+                                <p class="plan-description">
+                                    最高の思い出を映える写真に！
+                                    友情深まる撮影プラン
+                                </p>
+                                <div class="plan-price">
+                                    <span class="original-price">¥18,000</span>
+                                    <span class="current-price">¥14,400</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">このプランで予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SNS投稿風ギャラリーセクション -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">📸 SNSでバズった投稿</h2>
+            <p class="section-subtitle"><!-- ここにギャラリー -->実際にお客様がSNSに投稿して話題になった写真をご紹介</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="images/sns_post1.jpg" alt="SNS投稿1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 2,847</span>
+                            <span class="comments">💬 156</span>
+                            <span class="shares">📤 423</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/sns_post2.jpg" alt="SNS投稿2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 1,923</span>
+                            <span class="comments">💬 89</span>
+                            <span class="shares">📤 267</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/sns_post3.jpg" alt="SNS投稿3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 3,561</span>
+                            <span class="comments">💬 203</span>
+                            <span class="shares">📤 687</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/sns_post4.jpg" alt="SNS投稿4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 4,129</span>
+                            <span class="comments">💬 287</span>
+                            <span class="shares">📤 892</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/sns_post5.jpg" alt="SNS投稿5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 2,635</span>
+                            <span class="comments">💬 134</span>
+                            <span class="shares">📤 456</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/sns_post6.jpg" alt="SNS投稿6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="social-stats">
+                            <span class="likes">❤️ 1,847</span>
+                            <span class="comments">💬 92</span>
+                            <span class="shares">📤 321</span>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="gallery-btn like-btn">❤️</button>
+                            <button class="gallery-btn share-btn">📤</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-cta">
+                <h3 class="buzz-title" id="buzz-title">あなたもバズる写真を手に入れよう</h3>
+                <a href="#plans" class="btn btn-primary large-btn pulse-btn">🔥 バズるプランを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 口コミ・レビューセクション - SNS風スクリーンショット型 -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title">💬 お客様の声</h2>
+            <p class="section-subtitle"><!-- ここに体験者の声 -->実際に撮影されたお客様のリアルな声をお届け</p>
+            
+            <div class="swiper reviews-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="images/user1.jpg" alt="ユーザー1" class="user-avatar">
+                                <div class="user-info">
+                                    <div class="user-name">あいか @aika_photo</div>
+                                    <div class="user-handle">Instagram • 2時間前</div>
+                                </div>
+                                <div class="verified">✓</div>
+                            </div>
+                            <div class="review-content">
+                                <p class="review-text">
+                                    BuzzStudioで撮影してもらった写真、Instagram投稿したら過去最高のいいね数でした😭✨
+                                    カメラマンさんが本当に上手で、自然な表情を引き出してくれました！
+                                    #BuzzStudio #映える写真 #Instagram
+                                </p>
+                                <div class="review-stats">
+                                    <span class="likes">❤️ 2,847</span>
+                                    <span class="retweets">🔄 156</span>
+                                    <span class="replies">💬 89</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="images/user2.jpg" alt="ユーザー2" class="user-avatar">
+                                <div class="user-info">
+                                    <div class="user-name">ゆうと @yuto_couple</div>
+                                    <div class="user-handle">TikTok • 5時間前</div>
+                                </div>
+                                <div class="verified">✓</div>
+                            </div>
+                            <div class="review-content">
+                                <p class="review-text">
+                                    彼女と一緒にカップルフォト撮影💕
+                                    TikTokにアップしたらバズってフォロワー1000人増えた🔥
+                                    次回は友達も誘って撮影したい！
+                                    #カップルフォト #TikTok #バズった
+                                </p>
+                                <div class="review-stats">
+                                    <span class="likes">❤️ 1,923</span>
+                                    <span class="retweets">🔄 267</span>
+                                    <span class="replies">💬 134</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="images/user3.jpg" alt="ユーザー3" class="user-avatar">
+                                <div class="user-info">
+                                    <div class="user-name">みお @mio_oshi</div>
+                                    <div class="user-handle">Twitter • 1日前</div>
+                                </div>
+                                <div class="verified">✓</div>
+                            </div>
+                            <div class="review-content">
+                                <p class="review-text">
+                                    推し活撮影でBuzzStudioを利用！
+                                    推しグッズと一緒に撮ってもらった写真が最高すぎて涙😭
+                                    オタ活仲間からも大絶賛でした✨
+                                    #推し活 #オタ活 #映える写真
+                                </p>
+                                <div class="review-stats">
+                                    <span class="likes">❤️ 3,561</span>
+                                    <span class="retweets">🔄 423</span>
+                                    <span class="replies">💬 203</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="images/user4.jpg" alt="ユーザー4" class="user-avatar">
+                                <div class="user-info">
+                                    <div class="user-name">りな @rina_fashion</div>
+                                    <div class="user-handle">Instagram • 3日前</div>
+                                </div>
+                                <div class="verified">✓</div>
+                            </div>
+                            <div class="review-content">
+                                <p class="review-text">
+                                    プロフィール写真の撮影をお願いしました📸
+                                    今まで自撮りしか使ってなかったけど、プロに撮ってもらったら
+                                    いいね数が3倍になった！！予約して本当によかった💕
+                                </p>
+                                <div class="review-stats">
+                                    <span class="likes">❤️ 2,189</span>
+                                    <span class="retweets">🔄 187</span>
+                                    <span class="replies">💬 76</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- キャンペーンセクション -->
+    <section class="campaign-section" id="campaign">
+        <div class="container">
+            <h2 class="section-title">🎉 限定キャンペーン</h2>
+            <div class="campaign-grid">
+                <div class="campaign-card featured">
+                    <div class="campaign-badge">🔥 期間限定</div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">SNS投稿キャンペーン</h3>
+                        <p class="campaign-description">
+                            <!-- ここにSNSキャンペーン -->
+                            撮影した写真をSNSに投稿していただくと
+                            次回撮影が30%OFFになります！
+                        </p>
+                        <div class="campaign-timer">
+                            <span class="timer-label">キャンペーン終了まで：</span>
+                            <div class="timer" id="campaign-timer">
+                                <span class="time-unit">
+                                    <span class="time-value" id="days">07</span>
+                                    <span class="time-label">日</span>
+                                </span>
+                                <span class="time-unit">
+                                    <span class="time-value" id="hours">12</span>
+                                    <span class="time-label">時間</span>
+                                </span>
+                                <span class="time-unit">
+                                    <span class="time-value" id="minutes">34</span>
+                                    <span class="time-label">分</span>
+                                </span>
+                                <span class="time-unit">
+                                    <span class="time-value" id="seconds">56</span>
+                                    <span class="time-label">秒</span>
+                                </span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary large-btn pulse-btn">📱 今すぐ予約する</a>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-badge">✨ 新規限定</div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">初回撮影20%OFF</h3>
+                        <p class="campaign-description">
+                            初めてご利用の方限定！
+                            全プラン20%OFFでご利用いただけます
+                        </p>
+                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-badge">👫 友達紹介</div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">友達紹介特典</h3>
+                        <p class="campaign-description">
+                            お友達をご紹介いただくと
+                            お二人とも次回撮影が半額に！
+                        </p>
+                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQセクション -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">❓ よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>撮影時間はどのくらいですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>プランによって異なりますが、基本的には60分〜90分程度です。ゆっくりとお客様のペースに合わせて撮影を進めていきます。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>データはいつもらえますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>撮影から3-5営業日以内にオンラインでお渡しします。お急ぎの場合は当日仕上げ（別途料金）も承っております。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>衣装の持ち込みは可能ですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、お気に入りの衣装をお持ちいただけます。また、スタジオでも映える衣装をご用意していますので、手ぶらでも大丈夫です。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>SNSに投稿する際の注意点はありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>特に制限はありません。ハッシュタグ「#BuzzStudio」を付けて投稿していただくとキャンペーン対象になります。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>予約の変更・キャンセルはできますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>前日までにご連絡いただければ無料で変更・キャンセルが可能です。当日キャンセルの場合は料金の50%をいただいております。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終CTAセクション -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">📸 あなたも映える写真で<br>SNSデビューしませんか？</h2>
+                <p class="cta-subtitle">プロカメラマンがあなたの魅力を最大限に引き出します</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary large-btn pulse-btn">🔥 今すぐ撮影予約</a>
+                    <a href="#" class="btn btn-line large-btn">💬 LINEで相談する</a>
+                </div>
+                <div class="cta-note">
+                    <p>📞 お電話でのご予約：<strong>03-1234-5678</strong></p>
+                    <p>🕒 営業時間：10:00-20:00（年中無休）</p>
+                    <p>📍 アクセス：渋谷駅徒歩3分 / 新宿駅徒歩5分</p>
+                    <div class="social-links">
+                        <!-- ここにSNSリンク -->
+                        <a href="#" class="social-link instagram">📷 Instagram</a>
+                        <a href="#" class="social-link tiktok">🎵 TikTok</a>
+                        <a href="#" class="social-link twitter">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="【店舗名】の公式サイト。新鮮な食材を使った美味しい料理をご提供。LINE・電話で簡単予約。">
+    <meta name="keywords" content="レストラン, カフェ, 居酒屋, 予約, 美味しい料理, 新鮮食材">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="【店舗名】- 新鮮食材の美味しい料理">
+    <meta property="og:description" content="心を込めた料理でお客様をお迎えします。LINE・電話で簡単予約受付中。">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "【店舗名を入れてください】",
+        "image": "images/hero.jpg",
+        "description": "新鮮な食材を使った美味しい料理をご提供するレストラン",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "【住所を入れてください】",
+            "addressLocality": "【市区町村】",
+            "addressRegion": "【都道府県】",
+            "postalCode": "【郵便番号】",
+            "addressCountry": "JP"
+        },
+        "telephone": "【電話番号】",
+        "url": "【WebサイトURL】",
+        "openingHours": "【営業時間】",
+        "servesCuisine": "【料理ジャンル】",
+        "priceRange": "【価格帯】"
+    }
+    </script>
+    
+    <title>【店舗名】- 新鮮食材の美味しい料理 | LINE・電話で簡単予約</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>【店舗名を入れてください】</h1>
+                <p class="tagline">心を込めた料理でお迎えします</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#menu">メニュー</a></li>
+                    <li><a href="#about">店舗情報</a></li>
+                    <li><a href="#voice">お客様の声</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="【店舗名】の看板料理" loading="eager">
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h2 class="hero-title">新鮮食材の<br>美味しい料理を<br>お届けします</h2>
+                    <p class="hero-subtitle">【ここに店舗の特徴やこだわりを記載してください】</p>
+                    <div class="hero-buttons">
+                        <a href="#reservation" class="btn btn-primary">
+                            <span class="btn-icon">📞</span>
+                            電話で予約
+                        </a>
+                        <a href="#reservation" class="btn btn-secondary">
+                            <span class="btn-icon">💬</span>
+                            LINEで予約
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- メニュー紹介セクション -->
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <h2 class="section-title">メニュー</h2>
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-category="lunch">ランチ</button>
+                    <button class="menu-tab" data-category="dinner">ディナー</button>
+                    <button class="menu-tab" data-category="dessert">デザート</button>
+                </div>
+                
+                <!-- ランチメニュー -->
+                <div class="menu-category active" id="lunch">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-lunch-1.jpg" alt="ランチメニュー1" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ランチメニュー名1】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥1,200</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-lunch-2.jpg" alt="ランチメニュー2" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ランチメニュー名2】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥1,500</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-lunch-3.jpg" alt="ランチメニュー3" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ランチメニュー名3】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥1,800</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ディナーメニュー -->
+                <div class="menu-category" id="dinner">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-dinner-1.jpg" alt="ディナーメニュー1" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ディナーメニュー名1】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥2,800</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-dinner-2.jpg" alt="ディナーメニュー2" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ディナーメニュー名2】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥3,200</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-dinner-3.jpg" alt="ディナーメニュー3" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【ディナーメニュー名3】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥3,800</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- デザートメニュー -->
+                <div class="menu-category" id="dessert">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-dessert-1.jpg" alt="デザートメニュー1" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【デザートメニュー名1】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥680</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image">
+                                <img src="images/menu-dessert-2.jpg" alt="デザートメニュー2" loading="lazy">
+                            </div>
+                            <div class="menu-content">
+                                <h3>【デザートメニュー名2】</h3>
+                                <p>【メニュー説明を記載してください】</p>
+                                <div class="menu-price">¥780</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 店舗情報セクション -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">店舗情報</h2>
+                        <p>【ここに店舗の特徴やこだわりを詳しく記載してください】</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <div class="feature-icon">🥬</div>
+                                <div class="feature-content">
+                                    <h3>新鮮な食材</h3>
+                                    <p>【こだわりの食材について】</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">👨‍🍳</div>
+                                <div class="feature-content">
+                                    <h3>熟練シェフ</h3>
+                                    <p>【シェフの経験や技術について】</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">🏠</div>
+                                <div class="feature-content">
+                                    <h3>くつろぎの空間</h3>
+                                    <p>【店内の雰囲気について】</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/about-restaurant.jpg" alt="店舗外観" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の声セクション -->
+        <section class="voice-section" id="voice">
+            <div class="container">
+                <h2 class="section-title">お客様の声</h2>
+                <div class="voice-slider">
+                    <div class="voice-slide active">
+                        <div class="voice-card">
+                            <div class="voice-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                            <p class="voice-text">【お客様の声1を記載してください】</p>
+                            <div class="voice-author">
+                                <img src="images/voice-1.jpg" alt="お客様1" class="voice-avatar">
+                                <div class="voice-info">
+                                    <h4>【お客様名1】</h4>
+                                    <p>【年代・性別】</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice-slide">
+                        <div class="voice-card">
+                            <div class="voice-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                            <p class="voice-text">【お客様の声2を記載してください】</p>
+                            <div class="voice-author">
+                                <img src="images/voice-2.jpg" alt="お客様2" class="voice-avatar">
+                                <div class="voice-info">
+                                    <h4>【お客様名2】</h4>
+                                    <p>【年代・性別】</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voice-slide">
+                        <div class="voice-card">
+                            <div class="voice-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                            <p class="voice-text">【お客様の声3を記載してください】</p>
+                            <div class="voice-author">
+                                <img src="images/voice-3.jpg" alt="お客様3" class="voice-avatar">
+                                <div class="voice-info">
+                                    <h4>【お客様名3】</h4>
+                                    <p>【年代・性別】</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセスセクション -->
+        <section class="access-section" id="access">
+            <div class="container">
+                <h2 class="section-title">アクセス・店舗情報</h2>
+                <div class="access-content">
+                    <div class="access-info">
+                        <div class="info-item">
+                            <h3>📍 住所</h3>
+                            <p>【住所を記載してください】</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>📞 電話番号</h3>
+                            <p>【電話番号を記載してください】</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>🕐 営業時間</h3>
+                            <p>【営業時間を記載してください】</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>🚫 定休日</h3>
+                            <p>【定休日を記載してください】</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>🚃 アクセス</h3>
+                            <p>【最寄り駅からのアクセス方法を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="access-map">
+                        <div class="map-placeholder">
+                            <p>【Googleマップを埋め込んでください】</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問セクション -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">よくある質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>予約は必要ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>キャンセル料はかかりますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>お子様連れでも大丈夫ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>アレルギー対応はできますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予約セクション -->
+        <section class="reservation-section" id="reservation">
+            <div class="container">
+                <h2 class="section-title">ご予約・お問い合わせ</h2>
+                <div class="reservation-content">
+                    <div class="reservation-methods">
+                        <div class="method-card">
+                            <div class="method-icon">📞</div>
+                            <h3>電話予約</h3>
+                            <p>お電話でのご予約が確実です</p>
+                            <a href="tel:【電話番号】" class="btn btn-primary">
+                                【電話番号】
+                            </a>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">💬</div>
+                            <h3>LINE予約</h3>
+                            <p>LINEで気軽にご予約いただけます</p>
+                            <a href="【LINEのURL】" class="btn btn-secondary">
+                                LINE予約
+                            </a>
+                        </div>
+                    </div>
+                    <div class="reservation-note">
+                        <p>※ご予約の際は、お日にち・お時間・お人数をお知らせください</p>
+                        <p>※当日予約の場合は、お電話での確認をお願いいたします</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>【店舗名を入れてください】</h3>
+                    <p>【住所を記載してください】</p>
+                    <p>TEL: 【電話番号】</p>
+                    <p>営業時間: 【営業時間】</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#menu">メニュー</a></li>
+                        <li><a href="#about">店舗情報</a></li>
+                        <li><a href="#voice">お客様の声</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 【店舗名】. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 固定予約ボタン -->
+    <div class="fixed-reservation">
+        <a href="tel:【電話番号】" class="fixed-btn phone-btn">
+            <span class="btn-icon">📞</span>
+            <span class="btn-text">電話予約</span>
+        </a>
+        <a href="【LINEのURL】" class="fixed-btn line-btn">
+            <span class="btn-icon">💬</span>
+            <span class="btn-text">LINE予約</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

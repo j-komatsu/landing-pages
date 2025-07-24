@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ここに店名 - この辛さ、制覇できるか！？</title>
+    <meta name="description" content="蒙古タンメン中本風の激辛ラーメン専門店。炎のような辛さとうまさに挑戦しませんか？LINE予約受付中。">
+    <meta property="og:title" content="ここに店名 - この辛さ、制覇できるか！？">
+    <meta property="og:description" content="蒙古タンメン中本風の激辛ラーメン専門店。炎のような辛さとうまさに挑戦しませんか？">
+    <meta property="og:image" content="images/hero-spicy.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 炎のヒーローセクション -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-spicy.jpg" alt="激辛ラーメン" loading="eager">
+            <div class="hero-overlay"></div>
+            <div class="fire-particles" id="fire-particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="store-name">ここに店名</span>
+                <span class="challenge-text">挑戦者求む！</span>
+                <span class="spicy-level">この辛さ、制覇できるか！？</span>
+            </h1>
+            <p class="hero-subtitle">炎のような辛さと極上のうまさ<br>真の挑戦者だけが味わえる極限の一杯</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary flame-btn">🔥 即予約！</a>
+                <a href="#menu" class="btn btn-secondary flame-btn">🌶️ 辛さレベル確認</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta">
+        <a href="#" class="fixed-btn line-btn bounce-btn">🔥 LINE予約</a>
+        <a href="#" class="fixed-btn map-btn bounce-btn">📍 地図</a>
+    </div>
+
+    <!-- 挑戦者実績カウンター -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title">🔥 挑戦者たちの記録</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-count="8934">0</div>
+                    <div class="stat-label">総挑戦者数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-count="3247">0</div>
+                    <div class="stat-label">完食成功者</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌶️</div>
+                    <div class="stat-number" data-count="127">0</div>
+                    <div class="stat-label">超辛LV10突破者</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">💪</div>
+                    <div class="stat-number" data-count="98.5">0</div>
+                    <div class="stat-label">リピート率(%)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 激辛メニュー一覧 -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">🌶️ 辛さレベル別メニュー</h2>
+            <div class="swiper menu-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-card spicy-level-1">
+                            <div class="menu-image">
+                                <img src="images/menu-level1.jpg" alt="辛さレベル1" loading="lazy">
+                                <div class="spicy-badge level-1">辛さLV.1</div>
+                                <div class="flame-overlay"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>入門者タンメン</h3>
+                                <p class="menu-description">初心者でも楽しめるマイルドな辛さ。それでもピリッと刺激的！</p>
+                                <p class="menu-price">￥980</p>
+                                <div class="spicy-meter">
+                                    <div class="meter-fill" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-card spicy-level-5">
+                            <div class="menu-image">
+                                <img src="images/menu-level5.jpg" alt="辛さレベル5" loading="lazy">
+                                <div class="spicy-badge level-5">辛さLV.5</div>
+                                <div class="flame-overlay"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>炎の中級タンメン</h3>
+                                <p class="menu-description">じわじわと燃え上がる辛さ。汗が止まらない快感をお楽しみください。</p>
+                                <p class="menu-price">￥1,180</p>
+                                <div class="spicy-meter">
+                                    <div class="meter-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-card spicy-level-10">
+                            <div class="menu-image">
+                                <img src="images/menu-crazy-hot.jpg" alt="辛さレベル10" loading="lazy">
+                                <div class="spicy-badge level-10">辛さLV.10</div>
+                                <div class="flame-overlay intense"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>地獄の業火タンメン</h3>
+                                <p class="menu-description">【警告】究極の辛さ。完食者には証明書を発行！本気の挑戦者のみ。</p>
+                                <p class="menu-price">￥1,580</p>
+                                <div class="spicy-meter">
+                                    <div class="meter-fill danger" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 辛さの秘密セクション -->
+    <section class="secret-section" id="secret">
+        <div class="container">
+            <h2 class="section-title">🔥 辛さの秘密</h2>
+            <div class="secret-content">
+                <div class="secret-text">
+                    <h3>厳選された激辛食材</h3>
+                    <ul class="secret-list">
+                        <li>🌶️ <strong>朝天唐辛子</strong> - 中国四川省産の最高級唐辛子</li>
+                        <li>🔥 <strong>デスソース</strong> - 特製ブレンドの悪魔のソース</li>
+                        <li>⚡ <strong>ハバネロオイル</strong> - 一滴で炎上する魔法のオイル</li>
+                        <li>💥 <strong>ブート・ジョロキア</strong> - 世界最辛クラスの激辛唐辛子</li>
+                    </ul>
+                    <p class="warning-text">⚠️ 警告：辛いものが苦手な方、お腹の調子が悪い方はご遠慮ください</p>
+                </div>
+                <div class="secret-image">
+                    <img src="images/secret-ingredients.jpg" alt="激辛食材" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 汗だくお客様の声 -->
+    <section class="voice-section" id="voice">
+        <div class="container">
+            <h2 class="section-title">💦 挑戦者たちの声</h2>
+            <div class="swiper voice-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/sweat-voice1.jpg" alt="挑戦者の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">「レベル10は本当にヤバい！完食した時の達成感は最高でした。汗だくになったけど、また挑戦します！」</p>
+                                <p class="voice-author">激辛マニア 田中さん（28歳）</p>
+                                <div class="challenge-badge">LV.10完食</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/sweat-voice2.jpg" alt="挑戦者の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">「最初はレベル3で限界だったのに、今では8まで行けるように！段階的に挑戦できるのがいいですね。」</p>
+                                <p class="voice-author">OL 佐藤さん（25歳）</p>
+                                <div class="challenge-badge">LV.8達成</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <img src="images/sweat-voice3.jpg" alt="挑戦者の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">「友達と辛さ対決で来店。みんなで汗だくになりながら食べるのが最高に楽しい！SNS映えも◎」</p>
+                                <p class="voice-author">大学生 山田さん（21歳）</p>
+                                <div class="challenge-badge">LV.6制覇</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問セクション -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">🌶️ よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-chili.svg" alt="質問" class="faq-icon">
+                        <span>辛いのが苦手でも大丈夫ですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>レベル1から3までは辛いものが苦手な方でもお楽しみいただけます。辛さ調整も可能ですので、お気軽にお申し付けください。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-chili.svg" alt="質問" class="faq-icon">
+                        <span>初心者におすすめのメニューは？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>「入門者タンメン（レベル1）」がおすすめです。激辛の入り口として、まずはこちらから挑戦してみてください。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-chili.svg" alt="質問" class="faq-icon">
+                        <span>レベル10完食の特典はありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>レベル10完食者には「地獄制覇証明書」を発行いたします！また、店内の殿堂入りボードにお名前を掲載させていただきます。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-chili.svg" alt="質問" class="faq-icon">
+                        <span>牛乳などの辛さを和らげるものはありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい。牛乳、アイスクリーム、ヨーグルトドリンクをご用意しています。辛さに負けそうになったらお気軽にご注文ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報セクション -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <h2 class="section-title">🔥 店舗情報</h2>
+            <div class="info-content">
+                <div class="info-text">
+                    <h3>📍 アクセス</h3>
+                    <p>〒000-0000<br>
+                    東京都○○区○○ 1-1-1<br>
+                    ○○駅から徒歩3分</p>
+                    
+                    <h3>🕐 営業時間</h3>
+                    <p>平日：11:30-15:00, 18:00-23:00<br>
+                    土日祝：11:30-23:00<br>
+                    定休日：火曜日</p>
+                    
+                    <h3>📞 お問い合わせ</h3>
+                    <p>03-0000-0000<br>
+                    LINE予約がお得です！</p>
+                    
+                    <h3>⚠️ 重要なお知らせ</h3>
+                    <p>・辛さレベル7以上は事前にお声がけください<br>
+                    ・体調不良の方はご遠慮ください<br>
+                    ・完食チャレンジは自己責任でお願いします</p>
+                </div>
+                <div class="info-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7478754731765!2d139.69171031525398!3d35.689488980197404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857cc60b27%3A0x1c5b91d1b9a5c0d!2z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1642500000000!5m2!1sja!2sjp" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終挑戦CTAセクション -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <h2 class="cta-title">🔥 燃え上がれ！究極の挑戦！</h2>
+            <p class="cta-subtitle">真の辛さを求める勇者よ、この扉を開け</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary mega-btn flame-btn">🔥 今すぐLINE予約</a>
+                <a href="#" class="btn btn-secondary mega-btn flame-btn">📍 Googleマップで確認</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

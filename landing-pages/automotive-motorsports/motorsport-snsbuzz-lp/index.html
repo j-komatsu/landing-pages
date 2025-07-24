@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>限界のその先へ | モータースポーツ・カスタムカー祭り 2025</title>
+    <meta name="description" content="スピードの限界を超えろ！最高峰のモータースポーツイベント＆カスタムカーの祭典。SNSでバズる迫力の瞬間を体感せよ。">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="限界のその先へ | モータースポーツ・カスタムカー祭り 2025">
+    <meta property="og:description" content="スピードの限界を超えろ！最高峰のモータースポーツイベント＆カスタムカーの祭典。">
+    <meta property="og:image" content="images/share-banner.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="限界のその先へ | モータースポーツ・カスタムカー祭り 2025">
+    <meta name="twitter:description" content="スピードの限界を超えろ！最高峰のモータースポーツイベント＆カスタムカーの祭典。">
+    <meta name="twitter:image" content="images/share-banner.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- ページローディング -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">
+            <div class="speed-lines"></div>
+            <h1>MOTORSPORT FESTIVAL</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <span class="logo-text">MOTOR<span class="highlight">SPORT</span></span>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#hero" class="nav-link">ホーム</a>
+                    <a href="#highlights" class="nav-link">ハイライト</a>
+                    <a href="#gallery" class="nav-link">ギャラリー</a>
+                    <a href="#voices" class="nav-link">参加者の声</a>
+                    <a href="#entry" class="nav-link">エントリー</a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Heroセクション -->
+    <section class="hero" id="hero">
+        <!-- 背景動画エリア -->
+        <div class="hero-bg">
+            <video autoplay muted loop class="hero-video">
+                <source src="images/hero.mp4" type="video/mp4">
+                <!-- ここに迫力あるレース動画 -->
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Hero コンテンツ -->
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">限界のその先へ</span>
+                        <span class="title-line">カスタムの頂点へ</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        スピードを超越せよ。カスタムの極致を体感せよ。<br>
+                        2025年最大のモータースポーツ＆カスタムカーフェスティバル
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#entry" class="cta-btn primary">
+                            <span class="btn-text">イベント情報を見る</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <button class="cta-btn secondary" id="shareBtn">
+                            <span class="btn-text">SNSでシェア</span>
+                            <span class="btn-icon">📱</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- スクロールダウン -->
+                <div class="scroll-down">
+                    <span>SCROLL DOWN</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- パーティクルエフェクト -->
+        <div class="particles" id="particles"></div>
+    </section>
+
+    <!-- イベントハイライト（TikTok風縦動画） -->
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">EVENT</span> HIGHLIGHTS
+                </h2>
+                <p class="section-subtitle">縦動画で体感する、迫力の瞬間</p>
+            </div>
+            
+            <!-- TikTok風縦スライダー -->
+            <div class="vertical-slider-container">
+                <div class="swiper vertical-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="highlight-card">
+                                <video muted loop class="highlight-video">
+                                    <source src="images/highlight1.mp4" type="video/mp4">
+                                    <!-- ここにカスタムカーの迫力動画 -->
+                                </video>
+                                <div class="highlight-overlay">
+                                    <h3>爆音エンジンサウンド</h3>
+                                    <p>#カスタム祭り #爆音</p>
+                                    <div class="highlight-stats">
+                                        <span>❤️ 12.5K</span>
+                                        <span>💬 856</span>
+                                        <span>🔄 3.2K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="highlight-card">
+                                <video muted loop class="highlight-video">
+                                    <source src="images/highlight2.mp4" type="video/mp4">
+                                    <!-- ここにドリフト動画 -->
+                                </video>
+                                <div class="highlight-overlay">
+                                    <h3>ドリフト決戦</h3>
+                                    <p>#ドリフト #スピード</p>
+                                    <div class="highlight-stats">
+                                        <span>❤️ 8.9K</span>
+                                        <span>💬 542</span>
+                                        <span>🔄 2.1K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="highlight-card">
+                                <video muted loop class="highlight-video">
+                                    <source src="images/highlight3.mp4" type="video/mp4">
+                                    <!-- ここにカスタムカー展示動画 -->
+                                </video>
+                                <div class="highlight-overlay">
+                                    <h3>究極カスタム</h3>
+                                    <p>#カスタム #チューニング</p>
+                                    <div class="highlight-stats">
+                                        <span>❤️ 15.3K</span>
+                                        <span>💬 967</span>
+                                        <span>🔄 4.5K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- インパクトギャラリー -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">IMPACT</span> GALLERY
+                </h2>
+                <p class="section-subtitle">ここにカスタムカーギャラリー</p>
+            </div>
+            
+            <!-- フルスクリーングリッド -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="drift">
+                    <img src="images/gallery1.jpg" alt="ドリフトカー1" loading="lazy">
+                    <!-- ここに迫力のドリフトカー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>DRIFT BEAST</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 2.3K</span>
+                            <span>💬 156</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#ドリフト</span>
+                            <span>#RX7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="custom">
+                    <img src="images/gallery2.jpg" alt="カスタムカー1" loading="lazy">
+                    <!-- ここにカスタムカー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>CUSTOM LEGEND</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 1.8K</span>
+                            <span>💬 98</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#カスタム</span>
+                            <span>#GTR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="race">
+                    <img src="images/gallery3.jpg" alt="レースカー1" loading="lazy">
+                    <!-- ここにレースカー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>SPEED DEMON</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 3.1K</span>
+                            <span>💬 245</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#レース</span>
+                            <span>#スピード</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="vintage">
+                    <img src="images/gallery4.jpg" alt="ヴィンテージカー1" loading="lazy">
+                    <!-- ここにヴィンテージカー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>VINTAGE SOUL</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 1.5K</span>
+                            <span>💬 87</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#ヴィンテージ</span>
+                            <span>#クラシック</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="tuning">
+                    <img src="images/gallery5.jpg" alt="チューニングカー1" loading="lazy">
+                    <!-- ここにチューニングカー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>TUNING MASTER</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 2.7K</span>
+                            <span>💬 189</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#チューニング</span>
+                            <span>#ターボ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="lowrider">
+                    <img src="images/gallery6.jpg" alt="ローライダー1" loading="lazy">
+                    <!-- ここにローライダー写真 -->
+                    <div class="gallery-overlay">
+                        <h3>LOW RIDER</h3>
+                        <div class="gallery-stats">
+                            <span>❤️ 1.9K</span>
+                            <span>💬 112</span>
+                        </div>
+                        <div class="gallery-tags">
+                            <span>#ローライダー</span>
+                            <span>#ヒップホップ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ギャラリーフィルター -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="drift">DRIFT</button>
+                <button class="filter-btn" data-filter="custom">CUSTOM</button>
+                <button class="filter-btn" data-filter="race">RACE</button>
+                <button class="filter-btn" data-filter="vintage">VINTAGE</button>
+                <button class="filter-btn" data-filter="tuning">TUNING</button>
+                <button class="filter-btn" data-filter="lowrider">LOWRIDER</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SNS連動エリア -->
+    <section class="sns-buzz" id="snsBuzz">
+        <div class="container">
+            <div class="sns-header">
+                <h2 class="section-title">
+                    <span class="title-accent">SNS</span> BUZZ ZONE
+                </h2>
+                <p class="sns-subtitle">SNSで#カスタム祭りを投稿して限定グッズGET！</p>
+            </div>
+            
+            <div class="sns-content">
+                <!-- SNSシェアボタン -->
+                <div class="sns-share">
+                    <h3>今すぐシェアして参加しよう！</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" data-platform="twitter">
+                            <span class="btn-icon">𝕏</span>
+                            <span class="btn-text">Twitter</span>
+                        </button>
+                        <button class="share-btn instagram" data-platform="instagram">
+                            <span class="btn-icon">📷</span>
+                            <span class="btn-text">Instagram</span>
+                        </button>
+                        <button class="share-btn tiktok" data-platform="tiktok">
+                            <span class="btn-icon">🎵</span>
+                            <span class="btn-text">TikTok</span>
+                        </button>
+                        <button class="share-btn youtube" data-platform="youtube">
+                            <span class="btn-icon">📹</span>
+                            <span class="btn-text">YouTube</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 特典情報 -->
+                <div class="sns-rewards" id="snsRewards">
+                    <div class="reward-card">
+                        <h4>シェア特典</h4>
+                        <ul>
+                            <li>🎁 限定ステッカーセット</li>
+                            <li>🎫 入場料20%OFF</li>
+                            <li>📱 SNS映えスポット優先案内</li>
+                            <li>🏆 人気投稿者には特別賞品</li>
+                        </ul>
+                        <div class="reward-hashtags">
+                            <span>#カスタム祭り</span>
+                            <span>#モータースポーツ</span>
+                            <span>#限界突破</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参加者の声 -->
+    <section class="voices" id="voices">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">VOICES</span> FROM FANS
+                </h2>
+                <p class="section-subtitle">ここに参加者の声</p>
+            </div>
+            
+            <!-- SNS投稿風レビュー -->
+            <div class="swiper voices-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <img src="images/voice1.jpg" alt="参加者1" class="voice-avatar">
+                                <!-- ここに参加者のプロフィール画像 -->
+                                <div class="voice-info">
+                                    <h4>@speed_lover_tokyo</h4>
+                                    <p>東京・車好き</p>
+                                </div>
+                                <div class="voice-platform">📱</div>
+                            </div>
+                            <div class="voice-content">
+                                <p>去年参加して人生変わった！！カスタムカーのレベルが異次元すぎて、自分の車ももっと極めたくなった🔥 今年は友達も連れて絶対リベンジ！！</p>
+                                <div class="voice-hashtags">
+                                    <span>#カスタム祭り</span>
+                                    <span>#限界突破</span>
+                                    <span>#人生変わった</span>
+                                </div>
+                            </div>
+                            <div class="voice-stats">
+                                <span>❤️ 847</span>
+                                <span>💬 23</span>
+                                <span>🔄 156</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <img src="images/voice2.jpg" alt="参加者2" class="voice-avatar">
+                                <!-- ここに参加者のプロフィール画像 -->
+                                <div class="voice-info">
+                                    <h4>@drift_queen_osaka</h4>
+                                    <p>大阪・ドリフト女子</p>
+                                </div>
+                                <div class="voice-platform">🎵</div>
+                            </div>
+                            <div class="voice-content">
+                                <p>女子でも楽しめる！ドリフト体験最高だった😍 インスタ映えスポットもたくさんあって、フォロワー爆増w 今度は自分の車で参戦したい💪</p>
+                                <div class="voice-hashtags">
+                                    <span>#ドリフト女子</span>
+                                    <span>#インスタ映え</span>
+                                    <span>#フォロワー爆増</span>
+                                </div>
+                            </div>
+                            <div class="voice-stats">
+                                <span>❤️ 1.2K</span>
+                                <span>💬 67</span>
+                                <span>🔄 234</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <img src="images/voice3.jpg" alt="参加者3" class="voice-avatar">
+                                <!-- ここに参加者のプロフィール画像 -->
+                                <div class="voice-info">
+                                    <h4>@tuning_master_nagoya</h4>
+                                    <p>名古屋・チューナー</p>
+                                </div>
+                                <div class="voice-platform">📹</div>
+                            </div>
+                            <div class="voice-content">
+                                <p>プロのチューナーとして参加。レベル高すぎて刺激もらいまくり！新しい技術も学べて、YouTubeのネタも大量ゲット📹 毎年恒例にしたい！</p>
+                                <div class="voice-hashtags">
+                                    <span>#プロチューナー</span>
+                                    <span>#技術習得</span>
+                                    <span>#YouTube</span>
+                                </div>
+                            </div>
+                            <div class="voice-stats">
+                                <span>❤️ 956</span>
+                                <span>💬 45</span>
+                                <span>🔄 189</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- エントリー・予約セクション -->
+    <section class="entry" id="entry">
+        <div class="container">
+            <div class="entry-content">
+                <div class="entry-header">
+                    <h2 class="section-title">
+                        <span class="title-accent">ENTRY</span> NOW
+                    </h2>
+                    <p class="entry-subtitle">ここにエントリーボタン</p>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <h4>開催日時</h4>
+                            <p>ここに開催日時<br>2099年12月31日 23:59-翌1:00</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>会場</h4>
+                            <p>富士スピードウェイ<br>静岡県駿東郡小山町</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>参加費</h4>
+                            <p>一般: ¥3,000<br>学生: ¥2,000（要学生証）</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="entry-cta">
+                    <a href="#" class="entry-btn line" id="lineEntry">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">LINE予約はこちら</span>
+                    </a>
+                    <a href="#" class="entry-btn form" id="formEntry">
+                        <span class="btn-icon">📝</span>
+                        <span class="btn-text">Googleフォームで予約</span>
+                    </a>
+                </div>
+                
+                <!-- カウントダウン -->
+                <div class="countdown" id="countdown">
+                    <h3>イベントまで</h3>
+                    <div class="countdown-timer">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">DAYS</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">HOURS</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">MINUTES</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">SECONDS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">MOTOR<span class="highlight">SPORT</span></span>
+                    <p>限界のその先へ、カスタムの頂点へ</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">お問い合わせ</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🎵</a>
+                    <a href="#" class="social-link">📹</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MOTORSPORT FESTIVAL. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 固定CTAボタン（スティッキー） -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#entry" class="sticky-btn">
+            <span class="btn-text">今すぐエントリー</span>
+            <span class="btn-pulse"></span>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ここにサービス名 - 業界初、全てを変えるその瞬間へ</title>
+    <meta name="description" content="革新的なSaaSサービスの世界初発表。業界を変える瞬間に立ち会ってください。事前登録受付中。">
+    <meta property="og:title" content="ここにサービス名 - 業界初、全てを変えるその瞬間へ">
+    <meta property="og:description" content="革新的なSaaSサービスの世界初発表。業界を変える瞬間に立ち会ってください。">
+    <meta property="og:image" content="images/hero-announcement-bg.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero カウントダウンセクション -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <canvas id="particles-canvas"></canvas>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="service-name">ここにサービス名</div>
+            <h1 class="hero-title">業界初、全てを変える<br>その瞬間へ</h1>
+            <div class="countdown-container">
+                <div class="countdown-text">世界が動き出すまで、あと</div>
+                <div class="countdown-timer" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">日</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">時間</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">分</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">秒</span>
+                    </div>
+                </div>
+                <div class="announcement-date">2030年12月24日 12:00 正式発表</div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary pulse-btn">🚀 事前登録する</a>
+                <a href="#" class="btn btn-secondary pulse-btn">📊 発表会に参加</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta">
+        <a href="#" class="fixed-btn register-btn">🚀 事前登録</a>
+        <a href="#" class="fixed-btn event-btn">📊 発表会参加</a>
+    </div>
+
+    <!-- 実績カウンターセクション -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title">期待の声が集まっています</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-count="12847">0</div>
+                    <div class="stat-label">事前登録者数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🏢</div>
+                    <div class="stat-number" data-count="456">0</div>
+                    <div class="stat-label">注目企業数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-number" data-count="98.7">0</div>
+                    <div class="stat-label">満足度スコア</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">対応国数</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 革新ポイント紹介セクション -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">革新のポイント</h2>
+            <div class="swiper features-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="feature-card">
+                            <div class="feature-image">
+                                <img src="images/feature-1.jpg" alt="革新的AI技術" loading="lazy">
+                                <div class="feature-overlay">
+                                    <div class="feature-icon">🤖</div>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h3>革新的AI技術</h3>
+                                <p>業界初の自律型AIが、これまで人間にしかできなかった複雑な業務を完全自動化。生産性を10倍向上させます。</p>
+                                <div class="feature-badge">WORLD FIRST</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature-card">
+                            <div class="feature-image">
+                                <img src="images/feature-2.jpg" alt="次世代セキュリティ" loading="lazy">
+                                <div class="feature-overlay">
+                                    <div class="feature-icon">🛡️</div>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h3>次世代セキュリティ</h3>
+                                <p>量子暗号技術を応用した究極のセキュリティシステム。データの完全性を保証し、未来の脅威にも対応。</p>
+                                <div class="feature-badge">QUANTUM SECURITY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature-card">
+                            <div class="feature-image">
+                                <img src="images/feature-3.jpg" alt="無限スケーラビリティ" loading="lazy">
+                                <div class="feature-overlay">
+                                    <div class="feature-icon">♾️</div>
+                                </div>
+                            </div>
+                            <div class="feature-content">
+                                <h3>無限スケーラビリティ</h3>
+                                <p>独自のクラウドアーキテクチャにより、企業の成長に合わせて無制限にスケール。コストを気にせず拡張可能。</p>
+                                <div class="feature-badge">UNLIMITED SCALE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入企業ロゴセクション -->
+    <section class="customers-section" id="customers">
+        <div class="container">
+            <h2 class="section-title">注目企業からの期待</h2>
+            <div class="customers-grid">
+                <div class="customer-logo">
+                    <img src="images/customer-logo-1.jpg" alt="企業ロゴ1" loading="lazy">
+                </div>
+                <div class="customer-logo">
+                    <img src="images/customer-logo-2.jpg" alt="企業ロゴ2" loading="lazy">
+                </div>
+                <div class="customer-logo">
+                    <img src="images/customer-logo-3.jpg" alt="企業ロゴ3" loading="lazy">
+                </div>
+                <div class="customer-logo">
+                    <img src="images/customer-logo-4.jpg" alt="企業ロゴ4" loading="lazy">
+                </div>
+                <div class="customer-logo">
+                    <img src="images/customer-logo-5.jpg" alt="企業ロゴ5" loading="lazy">
+                </div>
+                <div class="customer-logo">
+                    <img src="images/customer-logo-6.jpg" alt="企業ロゴ6" loading="lazy">
+                </div>
+            </div>
+            <p class="customers-note">※ベータテスト参加企業・提携検討企業含む</p>
+        </div>
+    </section>
+
+    <!-- 事前登録セクション -->
+    <section class="registration-section" id="registration">
+        <div class="container">
+            <div class="registration-content">
+                <h2 class="section-title">発表まで待てない？</h2>
+                <p class="registration-subtitle">事前登録で、誰よりも早く最新情報を受け取れます</p>
+                <div class="registration-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-text">
+                            <h4>最速アクセス権</h4>
+                            <p>正式リリース時の優先利用権を獲得</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-text">
+                            <h4>特別価格</h4>
+                            <p>事前登録者限定の50%オフ価格</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📋</div>
+                        <div class="benefit-text">
+                            <h4>限定資料</h4>
+                            <p>技術仕様書やロードマップを先行公開</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="registration-buttons">
+                    <a href="#" class="btn btn-primary large-btn pulse-btn">今すぐ事前登録</a>
+                    <a href="#" class="btn btn-secondary large-btn pulse-btn">発表会参加申込</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問セクション -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-icon.svg" alt="質問" class="faq-icon">
+                        <span>正式発表はいつ行われますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>2030年12月24日12:00（日本時間）に世界同時発表を予定しています。オンライン発表会も同時開催いたします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-icon.svg" alt="質問" class="faq-icon">
+                        <span>事前登録の特典はありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>事前登録者には、優先利用権、特別価格（50%オフ）、限定資料の先行公開などの特典をご用意しています。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-icon.svg" alt="質問" class="faq-icon">
+                        <span>どのような企業が利用対象ですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>あらゆる規模の企業にご利用いただけます。特にDX推進、業務効率化、セキュリティ強化をお考えの企業に最適です。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-icon.svg" alt="質問" class="faq-icon">
+                        <span>発表会はオンラインで参加できますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい。世界中どこからでもオンラインでご参加いただけます。リアルタイム質疑応答セッションもご用意しています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終CTAセクション -->
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <h2 class="cta-title">歴史が変わる瞬間に<br>立ち会ってください</h2>
+            <p class="cta-subtitle">革新の最前線で、未来を一緒に創造しましょう</p>
+            <div class="cta-countdown">
+                <div class="mini-countdown" id="mini-countdown">
+                    <span id="mini-days">00</span>日 
+                    <span id="mini-hours">00</span>時間 
+                    <span id="mini-minutes">00</span>分 
+                    <span id="mini-seconds">00</span>秒
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary mega-btn pulse-btn">🚀 今すぐ事前登録</a>
+                <a href="#" class="btn btn-secondary mega-btn pulse-btn">📊 発表会参加申込</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

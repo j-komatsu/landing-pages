@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【あなたの名前】- UI/UX Designer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2DD4BF;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #2DD4BF;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        .section {
+            padding: 5rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .hero-text .role {
+            font-size: 1.5rem;
+            color: #2DD4BF;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero-text .catchphrase {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #2DD4BF;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: #0891b2;
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Section */
+        .profile {
+            background: #f8fafc;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .profile-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .skill-bar {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #2DD4BF, #0891b2);
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .skill-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tool-tag {
+            background: #2DD4BF;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Works Section */
+        .works {
+            padding: 5rem 0;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #e2e8f0;
+            color: #333;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #2DD4BF;
+            color: white;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .work-item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .work-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 200px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            overflow: hidden;
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .work-item:hover .work-image img {
+            transform: scale(1.1);
+        }
+
+        .work-content {
+            padding: 2rem;
+        }
+
+        .work-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .work-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .work-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .work-tag {
+            background: #f1f5f9;
+            color: #2DD4BF;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #f8fafc;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-role {
+            color: #2DD4BF;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2DD4BF;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #0891b2;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">【あなたの名前】</div>
+            <nav class="nav">
+                <a href="#hero">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#works">Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section fade-in">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>【あなたの名前】</h1>
+                    <div class="role">UI/UX Designer</div>
+                    <div class="catchphrase">
+                        ユーザーに愛されるデザインで、<br>
+                        ビジネスの成長をサポートします。<br>
+                        <strong>【ここにあなたのキャッチコピーを入力してください】</strong>
+                    </div>
+                    <div class="social-links">
+                        <a href="【XのURLを入力】" class="social-link" target="_blank">𝕏</a>
+                        <a href="【InstagramのURLを入力】" class="social-link" target="_blank">📷</a>
+                        <a href="【GitHubのURLを入力】" class="social-link" target="_blank">💻</a>
+                        <a href="【LinkedInのURLを入力】" class="social-link" target="_blank">💼</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-photo.jpg" alt="【あなたの名前】のプロフィール写真">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile & Skills Section -->
+    <section id="profile" class="profile section">
+        <div class="container">
+            <h2 class="section-title">Profile & Skills</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <h3 style="margin-bottom: 1.5rem; color: #333; font-size: 1.5rem;">自己紹介</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        【ここにあなたの自己紹介を入力してください。例：UI/UXデザイナーとして5年間の経験があります。ユーザー中心設計を重視し、使いやすさと美しさを両立したデザインを心がけています。】
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        【ここにあなたの経歴や得意分野を入力してください。例：これまでに50以上のWebサイトやアプリのUI/UXデザインを手がけ、クライアントのビジネス成長に貢献してきました。】
+                    </p>
+                    <p>
+                        <strong>得意分野：</strong>Webサイト設計、UI/UXデザイン、プロトタイピング、ユーザビリティテスト
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>デザイン</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                        <div class="skill-tools">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">Adobe XD</span>
+                            <span class="tool-tag">Sketch</span>
+                            <span class="tool-tag">Photoshop</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>フロントエンド</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-tools">
+                            <span class="tool-tag">HTML/CSS</span>
+                            <span class="tool-tag">JavaScript</span>
+                            <span class="tool-tag">React</span>
+                            <span class="tool-tag">Vue.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>プロトタイピング</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-tools">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">InVision</span>
+                            <span class="tool-tag">Principle</span>
+                            <span class="tool-tag">Framer</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>リサーチ</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <div class="skill-tools">
+                            <span class="tool-tag">ユーザーテスト</span>
+                            <span class="tool-tag">ヒアリング</span>
+                            <span class="tool-tag">分析</span>
+                            <span class="tool-tag">改善提案</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works section">
+        <div class="container">
+            <h2 class="section-title">Works</h2>
+            <p class="section-subtitle">これまでに手がけた制作実績の一部をご紹介します</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="web">Webサイト</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="banner">バナー</button>
+                <button class="filter-btn" data-filter="logo">ロゴ</button>
+            </div>
+
+            <div class="works-grid">
+                <div class="work-item" data-category="web">
+                    <div class="work-image">
+                        <img src="images/work-web01.jpg" alt="コーポレートサイトのデザイン">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">コーポレートサイトリニューアル</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：IT企業のコーポレートサイトを全面リニューアル。ユーザビリティを重視したデザインで、問い合わせ数が150%向上しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">Webデザイン</span>
+                            <span class="work-tag">UI/UX</span>
+                            <span class="work-tag">レスポンシブ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item" data-category="ui">
+                    <div class="work-image">
+                        <img src="images/work-ui01.jpg" alt="モバイルアプリのUI設計">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">モバイルアプリUI設計</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：フィットネスアプリのUI設計を担当。直感的な操作性を実現し、ユーザーエンゲージメントが200%向上しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">UI設計</span>
+                            <span class="work-tag">モバイル</span>
+                            <span class="work-tag">プロトタイピング</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item" data-category="banner">
+                    <div class="work-image">
+                        <img src="images/work-banner01.jpg" alt="キャンペーンバナーデザイン">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">キャンペーンバナー制作</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：ECサイトのキャンペーンバナーを制作。視覚的なインパクトを重視したデザインで、CTRが180%向上しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">バナー</span>
+                            <span class="work-tag">広告</span>
+                            <span class="work-tag">キャンペーン</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item" data-category="web">
+                    <div class="work-image">
+                        <img src="images/work-web02.jpg" alt="ECサイトのデザイン">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">ECサイトデザイン</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：アパレルブランドのECサイトをデザイン。購入までの導線を最適化し、コンバージョン率が220%向上しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">ECデザイン</span>
+                            <span class="work-tag">UX最適化</span>
+                            <span class="work-tag">コンバージョン</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item" data-category="logo">
+                    <div class="work-image">
+                        <img src="images/work-logo01.jpg" alt="ブランドロゴデザイン">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">ブランドロゴ制作</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：スタートアップ企業のロゴを制作。シンプルで印象的なデザインで、ブランド認知度向上に貢献しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">ロゴ</span>
+                            <span class="work-tag">ブランディング</span>
+                            <span class="work-tag">VI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item" data-category="ui">
+                    <div class="work-image">
+                        <img src="images/work-ui02.jpg" alt="ダッシュボードUI設計">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">ダッシュボードUI設計</h3>
+                        <p class="work-description">
+                            【制作実績の説明を入力してください。例：BtoBサービスの管理画面を設計。複雑な情報を整理し、業務効率が30%向上しました。】
+                        </p>
+                        <div class="work-tags">
+                            <span class="work-tag">ダッシュボード</span>
+                            <span class="work-tag">BtoB</span>
+                            <span class="work-tag">情報設計</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle">お客様からいただいた声をご紹介します</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">👤</div>
+                    <div class="testimonial-text">
+                        「【お客様の声を入力してください。例：デザインだけでなく、ユーザビリティも考慮した提案をいただき、非常に満足しています。おかげで売上が大幅に向上しました。】」
+                    </div>
+                    <div class="testimonial-author">【お客様の名前】</div>
+                    <div class="testimonial-role">【会社名・役職】</div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">👤</div>
+                    <div class="testimonial-text">
+                        「【お客様の声を入力してください。例：レスポンシブデザインの対応が素晴らしく、モバイルからのアクセスも大幅に改善されました。プロフェッショナルな仕事ぶりに感謝しています。】」
+                    </div>
+                    <div class="testimonial-author">【お客様の名前】</div>
+                    <div class="testimonial-role">【会社名・役職】</div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">👤</div>
+                    <div class="testimonial-text">
+                        「【お客様の声を入力してください。例：細かい要望にも柔軟に対応していただき、期待以上の成果物を受け取ることができました。また機会があればぜひお願いしたいです。】」
+                    </div>
+                    <div class="testimonial-author">【お客様の名前】</div>
+                    <div class="testimonial-role">【会社名・役職】</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    お仕事のご相談やお見積もりなど、<br>
+                    お気軽にお問い合わせください。<br>
+                    <strong>【ここにあなたの連絡先メッセージを入力してください】</strong>
+                </div>
+                <div class="contact-buttons">
+                    <a href="mailto:【あなたのメールアドレス】" class="contact-btn">
+                        📧 メールで相談
+                    </a>
+                    <a href="【LINEのURLを入力】" class="contact-btn" target="_blank">
+                        💬 LINEで相談
+                    </a>
+                    <a href="【GoogleフォームのURLを入力】" class="contact-btn" target="_blank">
+                        📝 フォームで相談
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 【あなたの名前】. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // フェードインアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // 全てのセクションを監視
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // ヘッダーの表示/非表示制御
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // フィルター機能
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const workItems = document.querySelectorAll('.work-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // アクティブボタンの切り替え
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // 作品の表示/非表示
+                workItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // スキルバーアニメーション
+        const skillProgressBars = document.querySelectorAll('.skill-progress');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target;
+                    const width = progressBar.style.width;
+                    progressBar.style.width = '0%';
+                    setTimeout(() => {
+                        progressBar.style.width = width;
+                    }, 300);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillProgressBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // 初期表示で最初のセクションをフェードイン
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

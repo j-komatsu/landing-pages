@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="【サロン名】の公式サイト。圧倒的個性とトレンド感で、Z世代の美容を全力サポート。LINE予約・Instagram連携で最新情報をチェック！">
+    <meta name="keywords" content="美容サロン, フェイシャル, ネイル, エステ, アイラッシュ, Z世代, SNS映え, トレンド, LINE予約">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="【サロン名】- 圧倒的個性の美容サロン">
+    <meta property="og:description" content="こんなLP見たことない！Z世代のための超トレンド美容サロン。LINE・Instagramでバズり中！">
+    <meta property="og:image" content="images/hero-salon.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "【サロン名を入れてください】",
+        "image": "images/hero-salon.jpg",
+        "description": "Z世代向けの圧倒的個性を持つ美容サロン。フェイシャル・ネイル・エステ・アイラッシュ・リラクゼーション全般",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "【住所を入れてください】",
+            "addressLocality": "【市区町村】",
+            "addressRegion": "【都道府県】",
+            "postalCode": "【郵便番号】",
+            "addressCountry": "JP"
+        },
+        "telephone": "【電話番号】",
+        "url": "【WebサイトURL】",
+        "openingHours": "【営業時間】",
+        "priceRange": "【価格帯】"
+    }
+    </script>
+    
+    <title>【サロン名】- 圧倒的個性の美容サロン | Z世代のトレンド美容 | LINE予約</title>
+    
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- 外部ライブラリ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- マウスストーカー -->
+    <div class="mouse-stalker">
+        <div class="stalker-inner">✨</div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>【サロン名】</h1>
+                <p class="catch-phrase">〜推しキャッチコピー〜</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#voice">Voice</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#line-reservation" class="btn-neon">LINE予約</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-video">
+                    <video autoplay muted loop playsinline>
+                        <source src="images/hero-salon.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">
+                        <span class="title-line">こんなLP</span>
+                        <span class="title-line">見たことない！</span>
+                        <span class="title-emphasis">圧倒的個性</span>
+                    </h2>
+                    <p class="hero-subtitle">Z世代のための超トレンド美容サロン</p>
+                    <div class="hero-buttons">
+                        <a href="#line-reservation" class="btn-hero btn-line">
+                            <span class="btn-icon">💌</span>
+                            LINE予約
+                        </a>
+                        <a href="#instagram" class="btn-hero btn-instagram">
+                            <span class="btn-icon">📸</span>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実績カウンター -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1500">0</div>
+                        <div class="stat-label">来店実績</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">人気メニュー</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">満足度(%)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5000">0</div>
+                        <div class="stat-label">SNSフォロワー</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About セクション -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="section-subtitle">私たちの世界観</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="speech-bubble">
+                            <p>【ここにサロンの特徴やこだわりを記載してください】</p>
+                            <p>常識を壊し、新しい美容体験を提供します✨</p>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">💫</div>
+                                <h3>圧倒的個性</h3>
+                                <p>他とは違う、あなただけの美しさを</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🌈</div>
+                                <h3>トレンド最前線</h3>
+                                <p>SNS映え間違いなしの最新技術</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">💎</div>
+                                <h3>Z世代特化</h3>
+                                <p>若い世代のライフスタイルに寄り添う</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/about-salon.jpg" alt="サロン内観" class="hover-tilt">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推しメニュー紹介セクション -->
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">推しメニュー</h2>
+                    <p class="section-subtitle">バズり間違いなし！</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-1.jpg" alt="人気メニュー1" class="hover-zoom">
+                            <div class="menu-badge">🔥HOT</div>
+                        </div>
+                        <div class="menu-content">
+                            <h3>【人気メニュー名1】</h3>
+                            <p>【SNSっぽい表現でメニュー説明】</p>
+                            <div class="menu-price">¥8,000</div>
+                            <div class="menu-tags">
+                                <span class="tag">#SNS映え</span>
+                                <span class="tag">#推し</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-2.jpg" alt="人気メニュー2" class="hover-zoom">
+                            <div class="menu-badge">✨NEW</div>
+                        </div>
+                        <div class="menu-content">
+                            <h3>【人気メニュー名2】</h3>
+                            <p>【SNSっぽい表現でメニュー説明】</p>
+                            <div class="menu-price">¥12,000</div>
+                            <div class="menu-tags">
+                                <span class="tag">#バズり</span>
+                                <span class="tag">#最新</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-3.jpg" alt="人気メニュー3" class="hover-zoom">
+                            <div class="menu-badge">💎VIP</div>
+                        </div>
+                        <div class="menu-content">
+                            <h3>【人気メニュー名3】</h3>
+                            <p>【SNSっぽい表現でメニュー説明】</p>
+                            <div class="menu-price">¥15,000</div>
+                            <div class="menu-tags">
+                                <span class="tag">#プレミアム</span>
+                                <span class="tag">#特別</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ネイルデザインギャラリー -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Design Gallery</h2>
+                    <p class="section-subtitle">推しデザイン集</p>
+                </div>
+                <div class="gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <img src="images/design-1.jpg" alt="ネイルデザイン1">
+                                <div class="gallery-overlay">
+                                    <h4>推しデザイン1</h4>
+                                    <p>#トレンドネイル</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <img src="images/design-2.jpg" alt="ネイルデザイン2">
+                                <div class="gallery-overlay">
+                                    <h4>推しデザイン2</h4>
+                                    <p>#キラキラネイル</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <img src="images/design-3.jpg" alt="ネイルデザイン3">
+                                <div class="gallery-overlay">
+                                    <h4>推しデザイン3</h4>
+                                    <p>#個性派ネイル</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                <img src="images/design-4.jpg" alt="ネイルデザイン4">
+                                <div class="gallery-overlay">
+                                    <h4>推しデザイン4</h4>
+                                    <p>#アートネイル</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の声 -->
+        <section class="voice-section" id="voice">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Customer Voice</h2>
+                    <p class="section-subtitle">リアルな声をお届け</p>
+                </div>
+                <div class="voice-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="voice-card">
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <div class="voice-text">
+                                    <p>【お客様の声1を記載してください】</p>
+                                </div>
+                                <div class="voice-author">
+                                    <img src="images/voice-1.jpg" alt="お客様1" class="voice-avatar">
+                                    <div class="voice-info">
+                                        <h4>【お客様名1】</h4>
+                                        <p>【年代・性別】</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="voice-card">
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <div class="voice-text">
+                                    <p>【お客様の声2を記載してください】</p>
+                                </div>
+                                <div class="voice-author">
+                                    <img src="images/voice-2.jpg" alt="お客様2" class="voice-avatar">
+                                    <div class="voice-info">
+                                        <h4>【お客様名2】</h4>
+                                        <p>【年代・性別】</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="voice-card">
+                                <div class="voice-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                </div>
+                                <div class="voice-text">
+                                    <p>【お客様の声3を記載してください】</p>
+                                </div>
+                                <div class="voice-author">
+                                    <img src="images/voice-3.jpg" alt="お客様3" class="voice-avatar">
+                                    <div class="voice-info">
+                                        <h4>【お客様名3】</h4>
+                                        <p>【年代・性別】</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram連携 -->
+        <section class="instagram-section" id="instagram">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Instagram</h2>
+                    <p class="section-subtitle">最新投稿をチェック</p>
+                </div>
+                <div class="instagram-grid">
+                    <div class="instagram-item">
+                        <img src="images/instagram-1.jpg" alt="Instagram投稿1">
+                        <div class="instagram-overlay">
+                            <span class="instagram-icon">📸</span>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="images/instagram-2.jpg" alt="Instagram投稿2">
+                        <div class="instagram-overlay">
+                            <span class="instagram-icon">📸</span>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="images/instagram-3.jpg" alt="Instagram投稿3">
+                        <div class="instagram-overlay">
+                            <span class="instagram-icon">📸</span>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="images/instagram-4.jpg" alt="Instagram投稿4">
+                        <div class="instagram-overlay">
+                            <span class="instagram-icon">📸</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-cta">
+                    <a href="【ここにInstagramURL】" class="btn-instagram-follow">
+                        <span class="btn-icon">💗</span>
+                        フォローする
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">FAQ</h2>
+                    <p class="section-subtitle">よくある質問</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>初回カウンセリングは無料ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>SNS投稿用の撮影はできますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>学生割引はありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>友達紹介特典はありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>【回答を記載してください】</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予約・お問い合わせ -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">今すぐ予約しよう！</p>
+                </div>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <div class="contact-icon">💌</div>
+                        <h3>LINE予約</h3>
+                        <p>24時間受付！気軽にメッセージを</p>
+                        <a href="【ここにLINE予約URL】" class="btn-contact btn-line">
+                            LINE予約
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <h3>電話予約</h3>
+                        <p>お急ぎの方はお電話で</p>
+                        <a href="tel:【電話番号】" class="btn-contact btn-phone">
+                            【電話番号】
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📸</div>
+                        <h3>Instagram</h3>
+                        <p>最新情報をチェック</p>
+                        <a href="【ここにInstagramURL】" class="btn-contact btn-instagram">
+                            フォロー
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>📍 住所</h4>
+                        <p>【住所を記載してください】</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🕐 営業時間</h4>
+                        <p>【営業時間を記載してください】</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🚫 定休日</h4>
+                        <p>【定休日を記載してください】</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>【サロン名】</h3>
+                    <p>〜推しキャッチコピー〜</p>
+                    <p>【住所】</p>
+                    <p>TEL: 【電話番号】</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#voice">Voice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="【ここにInstagramURL】">Instagram</a></li>
+                            <li><a href="【ここにLINE予約URL】">LINE</a></li>
+                            <li><a href="【ここにTwitterURL】">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 【サロン名】. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 固定CTA -->
+    <div class="fixed-cta">
+        <a href="【ここにLINE予約URL】" class="fixed-btn btn-line" id="line-reservation">
+            <span class="btn-icon bounce">💌</span>
+            <span class="btn-text">LINE予約</span>
+        </a>
+        <a href="【ここにInstagramURL】" class="fixed-btn btn-instagram">
+            <span class="btn-icon dance">📸</span>
+            <span class="btn-text">Instagram</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>癒しの森 Beauty Salon - 心と身体がほぐれる、不思議なサロン体験</title>
+    <meta name="description" content="森の中のような癒しの空間で、心と身体の美しさを整えませんか？ジブリ風の優しい雰囲気でお迎えします。LINE予約受付中。">
+    <meta property="og:title" content="癒しの森 Beauty Salon - 心と身体がほぐれる、不思議なサロン体験">
+    <meta property="og:description" content="森の中のような癒しの空間で、心と身体の美しさを整えませんか？ジブリ風の優しい雰囲気でお迎えします。">
+    <meta property="og:image" content="images/hero-forest.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 森の癒しHeroセクション -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-forest.jpg" alt="森の小道" loading="eager">
+            <div class="forest-particles" id="forest-particles"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="magical-frame">
+                <h1 class="hero-title">
+                    <span class="salon-name">癒しの森 Beauty Salon</span>
+                    <span class="magical-text">心と身体がほぐれる、不思議なサロン体験</span>
+                </h1>
+                <p class="hero-subtitle">忙しい日常から解放される場所<br>あなただけの特別な時間をお過ごしください</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary magical-btn">🌿 LINE予約</a>
+                    <a href="#menu" class="btn btn-secondary magical-btn">✨ メニューを見る</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-leaves" id="floating-leaves"></div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta">
+        <a href="#" class="fixed-btn line-btn">🌿 LINE予約</a>
+        <a href="#" class="fixed-btn insta-btn">📷 Instagram</a>
+    </div>
+
+    <!-- 癒しの実績カウンター -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title">✨ 皆さまに愛され続けて</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">🌸</div>
+                    <div class="stat-number" data-count="2847">0</div>
+                    <div class="stat-label">ご来店いただいたお客様</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">💚</div>
+                    <div class="stat-number" data-count="94.8">0</div>
+                    <div class="stat-label">リピーター率（%）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🍃</div>
+                    <div class="stat-number" data-count="1567">0</div>
+                    <div class="stat-label">フェイシャル施術回数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌙</div>
+                    <div class="stat-number" data-count="4.9">0</div>
+                    <div class="stat-label">満足度（5点満点）</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メニュー紹介（トトロ風枠） -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">🌿 心を込めたメニュー</h2>
+            <div class="swiper menu-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="menu-card totoro-frame">
+                            <div class="menu-image">
+                                <img src="images/menu-facial.jpg" alt="フェイシャルエステ" loading="lazy">
+                                <div class="magical-glow"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>🌸 フェイシャルエステ</h3>
+                                <p class="menu-description">
+                                    森の恵みを活かしたオーガニック化粧品で、お肌に優しく働きかけます。
+                                    毛穴の奥まで清潔にし、透明感のある素肌へ導きます。
+                                </p>
+                                <div class="menu-details">
+                                    <div class="menu-duration">⏰ 60分</div>
+                                    <div class="menu-price">￥8,800</div>
+                                </div>
+                                <div class="menu-benefits">
+                                    <span class="benefit-tag">保湿</span>
+                                    <span class="benefit-tag">美白</span>
+                                    <span class="benefit-tag">リラックス</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-card totoro-frame">
+                            <div class="menu-image">
+                                <img src="images/menu-nail.jpg" alt="ネイルケア" loading="lazy">
+                                <div class="magical-glow"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>💅 ネイルケア</h3>
+                                <p class="menu-description">
+                                    自然をモチーフにしたアートネイルから、シンプルで上品なデザインまで。
+                                    あなたらしい指先の美しさを演出いたします。
+                                </p>
+                                <div class="menu-details">
+                                    <div class="menu-duration">⏰ 90分</div>
+                                    <div class="menu-price">￥6,600</div>
+                                </div>
+                                <div class="menu-benefits">
+                                    <span class="benefit-tag">アート</span>
+                                    <span class="benefit-tag">ケア</span>
+                                    <span class="benefit-tag">持続性</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu-card totoro-frame">
+                            <div class="menu-image">
+                                <img src="images/menu-headspa.jpg" alt="ヘッドスパ" loading="lazy">
+                                <div class="magical-glow"></div>
+                            </div>
+                            <div class="menu-info">
+                                <h3>🌙 ヘッドスパ</h3>
+                                <p class="menu-description">
+                                    頭皮から心まで癒される至極のリラクゼーション。
+                                    アロマの香りに包まれながら、深いリラックス状態へ。
+                                </p>
+                                <div class="menu-details">
+                                    <div class="menu-duration">⏰ 45分</div>
+                                    <div class="menu-price">￥5,500</div>
+                                </div>
+                                <div class="menu-benefits">
+                                    <span class="benefit-tag">癒し</span>
+                                    <span class="benefit-tag">血行促進</span>
+                                    <span class="benefit-tag">ストレス解消</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 森の癒し空間紹介 -->
+    <section class="space-section" id="space">
+        <div class="container">
+            <h2 class="section-title">🏡 まるで森の中の隠れ家</h2>
+            <div class="space-content">
+                <div class="space-text">
+                    <h3>✨ 自然に包まれた特別な空間</h3>
+                    <p>
+                        サロンに一歩足を踏み入れると、そこは都市の喧騒を忘れさせる癒しの森。
+                        グリーンに囲まれた空間で、鳥のさえずりやそよ風の音に耳を傾けながら、
+                        心からリラックスできるひとときをお過ごしいただけます。
+                    </p>
+                    <div class="space-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🌿</span>
+                            <span class="feature-text">天然アロマの香り</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎵</span>
+                            <span class="feature-text">自然音でリラックス</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌞</span>
+                            <span class="feature-text">自然光たっぷりの個室</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🧘‍♀️</span>
+                            <span class="feature-text">瞑想空間も完備</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-image">
+                    <img src="images/space-interior.jpg" alt="サロン内観" loading="lazy">
+                    <div class="image-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声（優しいスライダー） -->
+    <section class="voice-section" id="voice">
+        <div class="container">
+            <h2 class="section-title">💝 お客様からの温かいお声</h2>
+            <div class="swiper voice-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="voice-card gentle-frame">
+                            <img src="images/customer-voice.jpg" alt="お客様の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「初めて伺った時から、まるで別世界に来たような感覚でした。施術も丁寧で、心も身体もすっかりリフレッシュできました。もう他のサロンには行けません！」
+                                </p>
+                                <p class="voice-author">🌸 M.Sさん（30代）</p>
+                                <div class="voice-rating">
+                                    <span class="star">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card gentle-frame">
+                            <img src="images/customer-voice.jpg" alt="お客様の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「忙しい毎日でストレスが溜まっていましたが、こちらでフェイシャルとヘッドスパを受けて本当に癒されました。スタッフの方も優しくて、また必ず来たいです。」
+                                </p>
+                                <p class="voice-author">🍃 A.Tさん（40代）</p>
+                                <div class="voice-rating">
+                                    <span class="star">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="voice-card gentle-frame">
+                            <img src="images/customer-voice.jpg" alt="お客様の声" loading="lazy">
+                            <div class="voice-content">
+                                <p class="voice-text">
+                                    「ネイルアートがとても素敵で、いつも楽しみにしています。自然をテーマにしたデザインは他では見たことがなく、友人からもよく褒められます。」
+                                </p>
+                                <p class="voice-author">🌺 R.Kさん（20代）</p>
+                                <div class="voice-rating">
+                                    <span class="star">⭐⭐⭐⭐⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問（FAQ） -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">🌿 よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-nature.svg" alt="質問" class="faq-icon">
+                        <span>初めての利用でも安心ですか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>もちろんです！初回の方には丁寧なカウンセリングを行い、お客様のお悩みやご希望をお聞きしてから施術に入ります。リラックスしてお過ごしいただけるよう心がけております。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-nature.svg" alt="質問" class="faq-icon">
+                        <span>予約はどのように取れますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>LINE公式アカウントからのご予約が最も便利です。お電話でのご予約も承っております。人気の時間帯は混み合いますので、お早めのご予約をおすすめします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-nature.svg" alt="質問" class="faq-icon">
+                        <span>支払い方法は何がありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>現金、各種クレジットカード、電子マネーでのお支払いが可能です。分割払いやポイント払いにも対応しておりますので、お気軽にお申し付けください。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <img src="images/faq-nature.svg" alt="質問" class="faq-icon">
+                        <span>駐車場はありますか？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>専用駐車場を3台分ご用意しております。満車の場合は近隣のコインパーキングをご利用ください（料金の一部を負担いたします）。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報セクション -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <h2 class="section-title">🏡 サロン情報</h2>
+            <div class="info-content">
+                <div class="info-text">
+                    <h3>📍 アクセス</h3>
+                    <p>〒000-0000<br>
+                    東京都○○区○○ 1-1-1<br>
+                    ○○駅から徒歩5分</p>
+                    
+                    <h3>🕐 営業時間</h3>
+                    <p>平日：10:00-19:00<br>
+                    土日祝：9:00-18:00<br>
+                    定休日：月曜日</p>
+                    
+                    <h3>📞 お問い合わせ</h3>
+                    <p>03-0000-0000<br>
+                    LINE予約が便利です！</p>
+                    
+                    <h3>✨ サロンからのお約束</h3>
+                    <p>・完全個室でプライベート空間をお約束<br>
+                    ・厳選したオーガニック商品のみ使用<br>
+                    ・お客様一人ひとりに合わせたオーダーメイド施術<br>
+                    ・アフターケアまで丁寧にサポート</p>
+                </div>
+                <div class="info-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7478754731765!2d139.69171031525398!3d35.689488980197404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857cc60b27%3A0x1c5b91d1b9a5c0d!2z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1642500000000!5m2!1sja!2sjp" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終癒しCTAセクション -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">🌸 あなたも森の魔法を体験しませんか？</h2>
+                <p class="cta-subtitle">心と身体が軽やかになる、特別なひとときをお約束します</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary large-btn magical-btn">🌿 今すぐLINE予約</a>
+                    <a href="#" class="btn btn-secondary large-btn magical-btn">📷 Instagramをフォロー</a>
+                </div>
+                <div class="cta-note">
+                    <p>✨ 初回ご来店で20%OFF ✨</p>
+                </div>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-leaf leaf-1">🍃</div>
+            <div class="floating-leaf leaf-2">🌸</div>
+            <div class="floating-leaf leaf-3">🦋</div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

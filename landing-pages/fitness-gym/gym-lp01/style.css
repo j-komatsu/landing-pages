@@ -1,0 +1,1110 @@
+/* CSS変数定義 - 高級感ネイビー + CTAレッド */
+:root {
+    --primary-navy: #0D47A1; /* 高級感ネイビー */
+    --cta-red: #E53935; /* CTAレッド */
+    --accent-gold: #FFA000; /* アクセントゴールド */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --medium-gray: #E0E0E0;
+    --dark-gray: #424242;
+    --text-dark: #212121;
+    --success-green: #4CAF50;
+    --bg-light: #FAFAFA;
+    --font-primary: 'Noto Sans JP', sans-serif;
+    --shadow-soft: 0 4px 20px rgba(13, 71, 161, 0.15);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 12px 40px rgba(229, 57, 53, 0.3);
+    --transition: 0.3s ease;
+    --border-radius: 12px;
+}
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダーナビゲーション - 透過 → 黒に切り替わる */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition);
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: var(--shadow-soft);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition);
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cta-red);
+    transition: width var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--cta-red);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* Heroセクション - フルスクリーン */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.3) 0%, rgba(229, 57, 53, 0.2) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-strong);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.hero-title {
+    margin-bottom: 30px;
+}
+
+.main-catch {
+    display: block;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+}
+
+.sub-catch {
+    display: block;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin-bottom: 40px;
+    color: var(--white);
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    color: var(--white);
+}
+
+.stat-number {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* ボタンスタイル */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all var(--transition);
+    cursor: pointer;
+    font-family: var(--font-primary);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+    color: var(--white);
+    box-shadow: var(--shadow-strong);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.line-btn {
+    background: #00C300;
+    color: var(--white);
+    border: none;
+}
+
+.pulse-btn {
+    animation: buttonPulse 3s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+    0%, 100% { box-shadow: var(--shadow-strong); }
+    50% { box-shadow: 0 8px 30px rgba(229, 57, 53, 0.5); }
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.large-btn {
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    min-width: 250px;
+}
+
+/* 固定CTAボタン */
+.fixed-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fixed-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition);
+    min-width: 120px;
+}
+
+.trial-btn {
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+    color: var(--white);
+}
+
+.fixed-btn:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--primary-navy);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cta-red), var(--accent-gold));
+    border-radius: 2px;
+}
+
+/* ビフォーアフター紹介セクション */
+.before-after-section {
+    background: var(--bg-light);
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 60px;
+}
+
+.ba-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition);
+}
+
+.ba-item:hover {
+    transform: translateY(-10px);
+}
+
+.ba-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.ba-before,
+.ba-after {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.ba-before img,
+.ba-after img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.ba-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.before-label {
+    background: rgba(66, 66, 66, 0.8);
+}
+
+.after-label {
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+}
+
+.ba-results h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+.result-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--cta-red);
+    margin-bottom: 5px;
+}
+
+.result-unit {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.result-comment {
+    color: var(--dark-gray);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* 実績・信頼獲得セクション */
+.achievements-section {
+    background: var(--white);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.achievement-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    transition: all var(--transition);
+    border: 3px solid transparent;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--cta-red);
+    background: var(--white);
+    box-shadow: var(--shadow-card);
+}
+
+.achievement-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.achievement-number {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.achievement-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+/* メディア掲載セクション */
+.media-section {
+    text-align: center;
+}
+
+.media-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 40px;
+}
+
+.media-swiper {
+    padding: 20px 0;
+}
+
+.media-swiper img {
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: all var(--transition);
+}
+
+.media-swiper img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* トレーナー紹介セクション */
+.trainers-section {
+    background: var(--bg-light);
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.trainer-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition);
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+}
+
+.trainer-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.trainer-card:hover .trainer-image img {
+    transform: scale(1.1);
+}
+
+.trainer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--primary-navy), #1565C0);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.trainer-info {
+    padding: 30px;
+}
+
+.trainer-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.trainer-title {
+    color: var(--cta-red);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.trainer-experience {
+    color: var(--dark-gray);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.trainer-description {
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.trainer-specialties {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.specialty-tag {
+    padding: 6px 12px;
+    background: var(--primary-navy);
+    color: var(--white);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* コース紹介・料金プランセクション */
+.plans-section {
+    background: var(--white);
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.plan-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--medium-gray);
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--cta-red);
+}
+
+.plan-card.popular {
+    border-color: var(--cta-red);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-strong);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+    color: var(--white);
+    padding: 8px 25px;
+    border-radius: 0 0 15px 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.plan-header {
+    text-align: center;
+    padding: 40px 30px 20px;
+    background: var(--bg-light);
+}
+
+.plan-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.plan-subtitle {
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.plan-price {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid var(--medium-gray);
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--cta-red);
+}
+
+.price-period {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.plan-features {
+    padding: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.feature-icon {
+    color: var(--success-green);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.feature-text {
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.plan-btn {
+    display: block;
+    width: calc(100% - 60px);
+    margin: 0 30px 30px;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-navy), #1565C0);
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    transition: all var(--transition);
+}
+
+.plan-btn:hover {
+    background: linear-gradient(135deg, var(--cta-red), #D32F2F);
+    transform: translateY(-2px);
+}
+
+/* 受講者の声セクション */
+.voices-section {
+    background: var(--bg-light);
+}
+
+.voices-swiper {
+    padding: 20px 0 80px;
+}
+
+.voice-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: transform var(--transition);
+    height: auto;
+}
+
+.voice-card:hover {
+    transform: translateY(-8px);
+}
+
+.voice-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--cta-red);
+}
+
+.voice-text {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-style: italic;
+}
+
+.voice-author {
+    margin-bottom: 15px;
+}
+
+.author-name {
+    display: block;
+    font-weight: 700;
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+}
+
+.author-age {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.voice-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    font-size: 1.3rem;
+}
+
+.rating-text {
+    font-size: 1rem;
+    color: var(--cta-red);
+    font-weight: 700;
+}
+
+/* FAQ（よくある質問）セクション */
+.faq-section {
+    background: var(--white);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 2px solid var(--medium-gray);
+    transition: border-color var(--transition);
+    box-shadow: var(--shadow-card);
+}
+
+.faq-item.active {
+    border-color: var(--cta-red);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--bg-light);
+}
+
+.faq-question span:first-child {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.faq-toggle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cta-red);
+    transition: transform var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition);
+}
+
+.faq-item.active .faq-answer {
+    padding: 25px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: var(--dark-gray);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* 最終CTAセクション */
+.final-cta {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--cta-red) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-title {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.cta-buttons .btn {
+    background: var(--white);
+    color: var(--primary-navy);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.cta-note {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.cta-note strong {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+/* Swiperカスタマイズ */
+.swiper-pagination-bullet {
+    background: var(--cta-red);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--cta-red);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--cta-red);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .before-after-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .ba-comparison {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .result-stats {
+        justify-content: center;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-card.popular {
+        transform: none;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fixed-cta {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+    
+    .btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+    
+    .large-btn {
+        padding: 16px 28px;
+        font-size: 1.1rem;
+        min-width: 200px;
+    }
+    
+    .ba-item {
+        padding: 20px;
+    }
+    
+    .ba-before img,
+    .ba-after img {
+        height: 250px;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trainer-info {
+        padding: 25px;
+    }
+    
+    .voice-card {
+        padding: 25px;
+    }
+}
+
+/* 特別なエフェクト */
+.fitness-glow {
+    animation: fitnessGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes fitnessGlow {
+    0% { box-shadow: var(--shadow-card); }
+    100% { box-shadow: var(--shadow-strong); }
+}
+
+.power-hover:hover {
+    animation: powerFloat 0.6s ease-in-out;
+}
+
+@keyframes powerFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}

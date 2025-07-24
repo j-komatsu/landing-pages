@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ここに店舗名 | クレイジー美味しいレストラン体験</title>
+    <meta name="description" content="一度見たら忘れない！ぶっとびインパクトレストラン。映える料理と最高の体験をお届け。">
+    
+    <!-- OGP設定 -->
+    <meta property="og:title" content="ここに店舗名 | クレイジー美味しいレストラン体験">
+    <meta property="og:description" content="一度見たら忘れない！ぶっとびインパクトレストラン。映える料理と最高の体験をお届け。">
+    <meta property="og:image" content="images/share-banner.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ここに店舗名 | クレイジー美味しいレストラン体験">
+    <meta name="twitter:description" content="一度見たら忘れない！ぶっとびインパクトレストラン。映える料理と最高の体験をお届け。">
+    <meta name="twitter:image" content="images/share-banner.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- インパクト爆発ヒーローセクション -->
+    <section class="hero" id="hero">
+        <!-- ダンシング背景エフェクト -->
+        <div class="hero-bg-effects">
+            <div class="dancing-shapes">
+                <div class="shape shape1">🍔</div>
+                <div class="shape shape2">🍕</div>
+                <div class="shape shape3">🍜</div>
+                <div class="shape shape4">🥗</div>
+                <div class="shape shape5">🍰</div>
+                <div class="shape shape6">🍺</div>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="hero-content">
+            <div class="hero-logo bouncing-logo">
+                <span class="logo-crazy">CRAZY</span>
+                <span class="logo-restaurant">RESTAURANT</span>
+            </div>
+            
+            <h1 class="hero-title wiggle-text">
+                <span class="title-line">ここに店舗名</span>
+                <span class="title-sub">(面白いキャッチ付き)</span>
+            </h1>
+            
+            <p class="hero-description glitch-text">
+                一度食べたら忘れられない！🔥<br>
+                インスタ映え保証の超クレイジー体験！
+            </p>
+            
+            <!-- インタラクティブCTAボタン -->
+            <div class="hero-cta">
+                <button class="cta-btn primary-crazy" id="reserveBtn">
+                    <span class="btn-text">今すぐ予約する</span>
+                    <span class="btn-emoji dancing-emoji">🎉</span>
+                </button>
+                <button class="cta-btn secondary-neon" id="lineBtn">
+                    <span class="btn-text">LINE登録</span>
+                    <span class="btn-emoji dancing-emoji">💌</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- スクロール誘導アニメーション -->
+        <div class="scroll-indicator">
+            <div class="bouncing-arrow">👇</div>
+            <span>スクロールして冒険開始！</span>
+        </div>
+    </section>
+
+    <!-- 爆速メニュー紹介 -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">メニュー</span>
+                <span class="title-sub">CRAZY MENU</span>
+            </h2>
+            
+            <!-- タブ切替メニュー -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="lunch">
+                    <span class="tab-emoji">🍱</span>
+                    <span>ランチ</span>
+                </button>
+                <button class="tab-btn" data-tab="dinner">
+                    <span class="tab-emoji">🍽️</span>
+                    <span>ディナー</span>
+                </button>
+                <button class="tab-btn" data-tab="takeout">
+                    <span class="tab-emoji">🥡</span>
+                    <span>テイクアウト</span>
+                </button>
+            </div>
+            
+            <!-- メニュースライダー -->
+            <div class="menu-slider-container">
+                <div class="swiper menu-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- ランチメニュー -->
+                        <div class="swiper-slide menu-tab-content active" data-tab="lunch">
+                            <div class="menu-grid">
+                                <div class="menu-item bouncing-card">
+                                    <div class="menu-image-container">
+                                        <img src="images/crazy-menu-1.jpg" alt="ここにメニュー名1" class="menu-image">
+                                        <!-- ここに料理画像 -->
+                                        <div class="price-badge">¥1,200</div>
+                                    </div>
+                                    <div class="menu-info">
+                                        <h3 class="menu-name">ここにメニュー名1</h3>
+                                        <p class="menu-comment">(遊び心あるコメント付き)</p>
+                                        <div class="menu-tags">
+                                            <span class="tag">🔥激うま</span>
+                                            <span class="tag">📸映え</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="menu-item bouncing-card">
+                                    <div class="menu-image-container">
+                                        <img src="images/crazy-menu-2.jpg" alt="ここにメニュー名2" class="menu-image">
+                                        <!-- ここに料理画像 -->
+                                        <div class="price-badge">¥1,500</div>
+                                    </div>
+                                    <div class="menu-info">
+                                        <h3 class="menu-name">ここにメニュー名2</h3>
+                                        <p class="menu-comment">(クレイジーな説明文)</p>
+                                        <div class="menu-tags">
+                                            <span class="tag">💥インパクト</span>
+                                            <span class="tag">🌟人気</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="menu-item bouncing-card">
+                                    <div class="menu-image-container">
+                                        <img src="images/crazy-menu-3.jpg" alt="ここにメニュー名3" class="menu-image">
+                                        <!-- ここに料理画像 -->
+                                        <div class="price-badge">¥980</div>
+                                    </div>
+                                    <div class="menu-info">
+                                        <h3 class="menu-name">ここにメニュー名3</h3>
+                                        <p class="menu-comment">(面白い一言コメント)</p>
+                                        <div class="menu-tags">
+                                            <span class="tag">🎊限定</span>
+                                            <span class="tag">🤤やみつき</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ディナーメニュー -->
+                        <div class="swiper-slide menu-tab-content" data-tab="dinner">
+                            <div class="menu-grid">
+                                <div class="menu-item bouncing-card">
+                                    <div class="menu-image-container">
+                                        <img src="images/crazy-menu-4.jpg" alt="ここにディナーメニュー1" class="menu-image">
+                                        <!-- ここにディナー料理画像 -->
+                                        <div class="price-badge">¥2,800</div>
+                                    </div>
+                                    <div class="menu-info">
+                                        <h3 class="menu-name">ここにディナーメニュー1</h3>
+                                        <p class="menu-comment">(夜限定の特別感あるコメント)</p>
+                                        <div class="menu-tags">
+                                            <span class="tag">🌙夜限定</span>
+                                            <span class="tag">🥂特別</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- テイクアウトメニュー -->
+                        <div class="swiper-slide menu-tab-content" data-tab="takeout">
+                            <div class="menu-grid">
+                                <div class="menu-item bouncing-card">
+                                    <div class="menu-image-container">
+                                        <img src="images/crazy-menu-5.jpg" alt="ここにテイクアウトメニュー1" class="menu-image">
+                                        <!-- ここにテイクアウト料理画像 -->
+                                        <div class="price-badge">¥800</div>
+                                    </div>
+                                    <div class="menu-info">
+                                        <h3 class="menu-name">ここにテイクアウトメニュー1</h3>
+                                        <p class="menu-comment">(お持ち帰り専用コメント)</p>
+                                        <div class="menu-tags">
+                                            <span class="tag">🏃お持ち帰り</span>
+                                            <span class="tag">⏰時短</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- インスタ映えギャラリー -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">ギャラリー</span>
+                <span class="title-sub">INSTAGRAM MOMENTS</span>
+            </h2>
+            
+            <!-- ギャラリースライダー -->
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-item tilted-card">
+                            <img src="images/gallery-1.jpg" alt="インスタ映え料理1" class="gallery-image">
+                            <!-- ここにギャラリー画像 -->
+                            <div class="gallery-overlay">
+                                <div class="gallery-stats">
+                                    <span class="stat">❤️ 1.2K</span>
+                                    <span class="stat">💬 89</span>
+                                </div>
+                                <p class="gallery-hashtags">#映え #美味しい #クレイジー</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="gallery-item tilted-card">
+                            <img src="images/gallery-2.jpg" alt="インスタ映え料理2" class="gallery-image">
+                            <!-- ここにギャラリー画像 -->
+                            <div class="gallery-overlay">
+                                <div class="gallery-stats">
+                                    <span class="stat">❤️ 856</span>
+                                    <span class="stat">💬 45</span>
+                                </div>
+                                <p class="gallery-hashtags">#最高 #おしゃれ #グルメ</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="gallery-item tilted-card">
+                            <img src="images/gallery-3.jpg" alt="インスタ映え料理3" class="gallery-image">
+                            <!-- ここにギャラリー画像 -->
+                            <div class="gallery-overlay">
+                                <div class="gallery-stats">
+                                    <span class="stat">❤️ 2.1K</span>
+                                    <span class="stat">💬 156</span>
+                                </div>
+                                <p class="gallery-hashtags">#絶品 #感動 #リピート確定</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声（レビュー） -->
+    <section class="voice-section" id="voice">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">お客様の声</span>
+                <span class="title-sub">CRAZY REVIEWS</span>
+            </h2>
+            
+            <!-- レビュースライダー -->
+            <div class="swiper voice-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="voice-card floating-card">
+                            <div class="voice-header">
+                                <img src="images/voice-1.jpg" alt="お客様1" class="voice-avatar">
+                                <!-- ここにお客様の画像 -->
+                                <div class="voice-info">
+                                    <h4 class="voice-name">@グルメ太郎</h4>
+                                    <div class="voice-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    </div>
+                                </div>
+                                <div class="voice-platform">📱</div>
+                            </div>
+                            <p class="voice-content">
+                                やばい！これ本当に美味しすぎる😍 インスタで見て来たけど、想像の10倍すごかった！絶対また来る！！
+                            </p>
+                            <div class="voice-hashtags">
+                                <span class="hashtag">#美味しすぎ</span>
+                                <span class="hashtag">#リピート確定</span>
+                                <span class="hashtag">#感動</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="voice-card floating-card">
+                            <div class="voice-header">
+                                <img src="images/voice-2.jpg" alt="お客様2" class="voice-avatar">
+                                <!-- ここにお客様の画像 -->
+                                <div class="voice-info">
+                                    <h4 class="voice-name">@映え子ちゃん</h4>
+                                    <div class="voice-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    </div>
+                                </div>
+                                <div class="voice-platform">📷</div>
+                            </div>
+                            <p class="voice-content">
+                                写真撮りまくっちゃった📸 見た目も味も完璧！友達にも絶対おすすめする〜💕
+                            </p>
+                            <div class="voice-hashtags">
+                                <span class="hashtag">#映え最高</span>
+                                <span class="hashtag">#友達と</span>
+                                <span class="hashtag">#完璧</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="voice-card floating-card">
+                            <div class="voice-header">
+                                <img src="images/voice-3.jpg" alt="お客様3" class="voice-avatar">
+                                <!-- ここにお客様の画像 -->
+                                <div class="voice-info">
+                                    <h4 class="voice-name">@デート花子</h4>
+                                    <div class="voice-rating">
+                                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    </div>
+                                </div>
+                                <div class="voice-platform">💕</div>
+                            </div>
+                            <p class="voice-content">
+                                彼氏と来たけど二人とも大興奮！こんな楽しいレストラン初めて💖 記念日にまた来たい！
+                            </p>
+                            <div class="voice-hashtags">
+                                <span class="hashtag">#デート</span>
+                                <span class="hashtag">#記念日</span>
+                                <span class="hashtag">#最高</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- スライダーナビゲーション -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報 -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">店舗情報</span>
+                <span class="title-sub">RESTAURANT INFO</span>
+            </h2>
+            
+            <div class="info-grid">
+                <div class="info-card bouncing-card">
+                    <div class="info-icon">📍</div>
+                    <h3>アクセス</h3>
+                    <p>ここに住所<br>〇〇駅から徒歩3分</p>
+                </div>
+                
+                <div class="info-card bouncing-card">
+                    <div class="info-icon">⏰</div>
+                    <h3>営業時間</h3>
+                    <p>平日: 11:00-22:00<br>土日: 10:00-23:00</p>
+                </div>
+                
+                <div class="info-card bouncing-card">
+                    <div class="info-icon">📞</div>
+                    <h3>お問い合わせ</h3>
+                    <p>TEL: 03-1234-5678<br>ここにLINEリンク</p>
+                </div>
+                
+                <div class="info-card bouncing-card">
+                    <div class="info-icon">💳</div>
+                    <h3>お支払い</h3>
+                    <p>現金・クレジットカード<br>PayPay・LINE Pay対応</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQセクション -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">よくある質問</span>
+                <span class="title-sub">FAQ</span>
+            </h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>予約は必要ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>平日はご予約なしでもお席をご用意できますが、土日祝日は満席になることが多いため、事前のご予約をおすすめします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>大人数での利用はできますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>8名様以上の場合は事前にご相談ください。貸切プランもご用意しております。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>アレルギー対応はありますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>アレルギーをお持ちの方は事前にお知らせください。可能な限り対応いたします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>駐車場はありますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>専用駐車場は5台分ございます。満車の場合は近隣のコインパーキングをご利用ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 予約・お問い合わせセクション -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title crazy-title">
+                <span class="title-main">予約・お問い合わせ</span>
+                <span class="title-sub">CONTACT US</span>
+            </h2>
+            
+            <!-- カウントダウン -->
+            <div class="countdown-container">
+                <h3 class="countdown-title">🎉 グランドオープンまで 🎉</h3>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">DAYS</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">HOURS</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">MINUTES</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">SECONDS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 予約ボタン -->
+            <div class="contact-cta">
+                <a href="#" class="contact-btn line-btn" id="lineReserve">
+                    <span class="btn-icon dancing-line-icon">💬</span>
+                    <span class="btn-text">ここにLINE登録リンク</span>
+                </a>
+                <a href="#" class="contact-btn form-btn" id="formReserve">
+                    <span class="btn-icon">📝</span>
+                    <span class="btn-text">ここに予約フォームリンク</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 固定CTAボタン -->
+    <div class="fixed-cta" id="fixedCta">
+        <a href="#" class="fixed-btn line-fixed" id="fixedLine">
+            <span class="btn-icon pulsing-icon">💬</span>
+            <span class="btn-text">LINE予約</span>
+        </a>
+        <a href="#" class="fixed-btn reserve-fixed" id="fixedReserve">
+            <span class="btn-icon pulsing-icon">🍴</span>
+            <span class="btn-text">今すぐ予約</span>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

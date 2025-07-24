@@ -1,0 +1,874 @@
+/* CSS変数定義 */
+:root {
+    --vivid-red: #FF3D00; /* ビビッドレッド */
+    --clear-blue: #0288D1; /* クリアブルー */
+    --white: #FFFFFF; /* ホワイト背景 */
+    --light-gray: #F5F5F5; /* ライトグレー */
+    --dark-gray: #333333; /* ダークグレー */
+    --success-green: #4CAF50; /* 成功グリーン */
+    --warning-orange: #FF9800; /* 注意オレンジ */
+    --font-main: 'Noto Sans JP', sans-serif;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 25px rgba(255, 61, 0, 0.3);
+    --transition: 0.3s ease;
+    --border-radius: 8px;
+}
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* カットの早さ＆安さHeroセクション */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 61, 0, 0.8) 0%, rgba(2, 136, 209, 0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.quick-badge {
+    display: inline-block;
+    background: var(--vivid-red);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.hero-title {
+    margin-bottom: 30px;
+}
+
+.store-name {
+    display: block;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 900;
+    color: var(--clear-blue);
+    margin-bottom: 10px;
+}
+
+.main-copy {
+    display: block;
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    font-weight: 900;
+    color: var(--vivid-red);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-copy {
+    display: block;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.price-highlight {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.price-item {
+    text-align: center;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    min-width: 150px;
+    border: 2px solid var(--vivid-red);
+}
+
+.price-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.price-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--vivid-red);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ボタンスタイル */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all var(--transition);
+    cursor: pointer;
+    font-family: var(--font-main);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--vivid-red);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary {
+    background: var(--clear-blue);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.speed-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.speed-btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.large-btn {
+    padding: 18px 40px;
+    font-size: 1.3rem;
+}
+
+/* 固定CTAボタン */
+.fixed-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fixed-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition);
+    min-width: 120px;
+}
+
+.line-btn {
+    background: var(--vivid-red);
+    color: var(--white);
+}
+
+.queue-btn {
+    background: var(--clear-blue);
+    color: var(--white);
+}
+
+.fixed-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--dark-gray);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--vivid-red);
+    border-radius: 2px;
+}
+
+/* スピード実績カウンター */
+.stats-section {
+    background: var(--light-gray);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition);
+    border: 3px solid transparent;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--vivid-red);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 900;
+    color: var(--vivid-red);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+/* 料金メニューセクション */
+.menu-section {
+    background: var(--white);
+}
+
+.menu-swiper {
+    padding: 20px 0 60px;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition);
+    height: auto;
+    border: 2px solid var(--light-gray);
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--vivid-red);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--light-gray);
+}
+
+.menu-type {
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.menu-popular {
+    background: var(--vivid-red);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.menu-discount {
+    background: var(--warning-orange);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.menu-upgrade {
+    background: var(--success-green);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.menu-content {
+    padding: 25px;
+}
+
+.menu-content h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--clear-blue);
+    margin-bottom: 15px;
+}
+
+.menu-price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--vivid-red);
+    margin-bottom: 10px;
+}
+
+.menu-time {
+    font-size: 1rem;
+    color: var(--success-green);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.menu-description {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.menu-features {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* 3つの魅力ポイント */
+.features-section {
+    background: var(--light-gray);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--clear-blue);
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* 店内の様子 */
+.interior-section {
+    background: var(--white);
+}
+
+.interior-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.interior-text h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--clear-blue);
+    margin-bottom: 20px;
+}
+
+.interior-text p {
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.interior-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.point-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.point-icon {
+    font-size: 1.5rem;
+}
+
+.point-text {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.interior-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.interior-image img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition);
+}
+
+.interior-image:hover img {
+    transform: scale(1.05);
+}
+
+/* お客様の声（スピード感・満足度） */
+.voice-section {
+    background: var(--light-gray);
+}
+
+.voice-swiper {
+    padding: 20px 0 60px;
+}
+
+.voice-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: transform var(--transition);
+    height: auto;
+    border: 2px solid transparent;
+}
+
+.voice-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--clear-blue);
+}
+
+.voice-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--vivid-red);
+}
+
+.voice-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    font-style: italic;
+}
+
+.voice-author {
+    font-weight: 700;
+    color: var(--clear-blue);
+    margin-bottom: 15px;
+}
+
+.voice-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.star {
+    font-size: 1.2rem;
+}
+
+.rating-text {
+    font-size: 0.9rem;
+    color: var(--success-green);
+    font-weight: 600;
+}
+
+/* よくある質問（FAQ） */
+.faq-section {
+    background: var(--white);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 2px solid var(--light-gray);
+    transition: border-color var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-item.active {
+    border-color: var(--vivid-red);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--light-gray);
+}
+
+.faq-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    fill: var(--clear-blue);
+}
+
+.faq-question span:first-of-type {
+    flex: 1;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--vivid-red);
+    transition: transform var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition);
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* 店舗情報セクション */
+.info-section {
+    background: var(--light-gray);
+}
+
+.info-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.info-text h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--clear-blue);
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.info-text h3:first-child {
+    margin-top: 0;
+}
+
+.info-text p {
+    color: var(--dark-gray);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.info-map {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+/* 最終スピードCTAセクション */
+.final-cta {
+    background: linear-gradient(135deg, var(--vivid-red) 0%, var(--clear-blue) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-title {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+    background: var(--white);
+    color: var(--vivid-red);
+}
+
+.cta-buttons .btn-secondary {
+    background: var(--white);
+    color: var(--clear-blue);
+}
+
+.cta-note p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Swiperカスタマイズ */
+.swiper-pagination-bullet {
+    background: var(--vivid-red);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--vivid-red);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price-highlight {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .interior-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .interior-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fixed-cta {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .large-btn {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        padding: 30px 15px;
+    }
+    
+    .menu-content {
+        padding: 20px;
+    }
+    
+    .feature-item {
+        padding: 30px 20px;
+    }
+}
